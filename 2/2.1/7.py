@@ -1,6 +1,5 @@
 def main():
-    n = int(input())
-    for i in range(n):
+    for _ in range(int(input())):
         print("Купи слона!")
 
 

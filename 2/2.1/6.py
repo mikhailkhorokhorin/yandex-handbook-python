@@ -1,10 +1,8 @@
 def main():
     name = input()
-    coast = int(input())
-    weight = int(input())
-    money = int(input())
-
+    coast, weight, money = [int(input()) for _ in range(3)]
     final_coast = weight * coast
+
     print("Чек")
     print(f"{name} - {weight}кг - {coast}руб/кг")
     print(f"Итого: {final_coast}руб")

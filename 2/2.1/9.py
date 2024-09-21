@@ -1,6 +1,5 @@
 def main():
-    n = int(input())
-    m = int(input())
+    n, m = [int(input()) for _ in range(2)]
     print(n * m // 2)
 
 

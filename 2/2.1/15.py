@@ -1,7 +1,5 @@
 def main():
-    n = int(input())
-    m = int(input())
-    t = int(input())
+    n, m, t = [int(input()) for _ in range(3)]
 
     hours = t // 60
     m += t % 60

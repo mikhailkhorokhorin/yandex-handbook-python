@@ -1,6 +1,5 @@
 def main():
-    name = input()
-    number = input()
+    name, number = input(), input()
     print(f"Группа №{number[0]}.")
     print(f"{number[2]}. {name}.")
     print(f"Шкафчик: {number}.")

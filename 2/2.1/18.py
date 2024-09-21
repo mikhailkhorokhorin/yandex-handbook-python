@@ -1,7 +1,5 @@
 def main():
-    coast = int(input(), 2)
-    money = int(input())
-    print(money - coast)
+    print(-int(input(), 2) + int(input()))
 
 
 if __name__ == "__main__":

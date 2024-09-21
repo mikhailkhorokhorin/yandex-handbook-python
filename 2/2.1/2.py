@@ -1,6 +1,5 @@
 def main():
-    print("Как Вас зовут?")
-    name = input()
+    name = input("Как Вас зовут?\n")
     print(f"Привет, {name}")
 
 

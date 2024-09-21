@@ -1,6 +1,6 @@
 def main():
     string = input()
-    for i in range(3):
+    for _ in range(3):
         print(string)
 
 

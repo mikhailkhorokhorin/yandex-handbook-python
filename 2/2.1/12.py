@@ -1,6 +1,5 @@
 def main():
-    n = int(input())
-    m = int(input())
+    n, m = [int(input()) for _ in range(2)]
 
     s1 = (n // 100 + m // 100) % 10
     s2 = ((n // 10) % 10 + (m // 10) % 10) % 10

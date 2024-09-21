@@ -1,7 +1,5 @@
 def main():
-    coast = int(input())
-    weight = int(input())
-    money = int(input())
+    coast, weight, money = [int(input()) for _ in range(3)]
     print(money - weight * coast)
 
 

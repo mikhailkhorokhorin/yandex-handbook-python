@@ -1,7 +1,5 @@
 def main():
-    red = int(input())
-    green = int(input())
-    blue = int(input())
+    red, _, blue = [int(input()) for _ in range(3)]
     print(red + blue + 1)
 
 
