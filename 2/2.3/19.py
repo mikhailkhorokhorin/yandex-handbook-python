@@ -1,16 +1,16 @@
 def main():
-    number = 500
-    delta = 250
+    num = 500
+    k = 250
 
-    print(number)
+    print(num)
     while (s := input()) != "Угадал!":
         if s == "Меньше":
-            number -= delta
+            num -= k
         elif s == "Больше":
-            number += delta
-        if delta >= 2:
-            delta = (delta + 1) // 2
-        print(number)
+            num += k
+        if k >= 2:
+            k = (k + 1) // 2
+        print(num)
 
 
 if __name__ == "__main__":

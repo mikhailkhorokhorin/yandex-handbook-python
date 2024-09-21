@@ -1,6 +1,5 @@
 def main():
-    s = input()
-    print(max([int(x) for x in s]))
+    print(max([int(x) for x in input()]))
 
 
 if __name__ == "__main__":

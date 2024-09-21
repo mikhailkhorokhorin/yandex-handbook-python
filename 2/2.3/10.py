@@ -9,8 +9,7 @@ def main():
             x += val * xcord[s]
         else:
             y += val * ycord[s]
-    print(y)
-    print(x)
+    print(y, x, sep="\n")
 
 
 if __name__ == "__main__":

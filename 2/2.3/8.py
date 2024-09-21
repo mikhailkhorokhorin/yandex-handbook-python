@@ -1,8 +1,6 @@
 def main():
     s = input()
-    n = int(input())
-
-    for i in range(n):
+    for i in range(int(input())):
         print(s)
 
 

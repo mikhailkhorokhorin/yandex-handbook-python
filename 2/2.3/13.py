@@ -1,9 +1,5 @@
 def main():
-    num = int(input())
-    d = []
-    for i in range(num):
-        d.append(input())
-    print(min(d))
+    print(min([input() for i in range(int(input()))]))
 
 
 if __name__ == "__main__":

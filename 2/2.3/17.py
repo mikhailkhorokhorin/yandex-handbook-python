@@ -1,7 +1,5 @@
 def main():
-    num = input()
-    res = [int(x) for x in num if int(x) % 2 != 0]
-    print(*res, sep="")
+    print(*[int(x) for x in input() if int(x) % 2 != 0], sep="")
 
 
 if __name__ == "__main__":

@@ -2,8 +2,7 @@ def main():
     n = int(input())
     k = 0
     for i in range(n):
-        s = input()
-        if 'зайка' in s:
+        if 'зайка' in input():
             k += 1
     print(k)
 

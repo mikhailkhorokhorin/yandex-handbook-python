@@ -1,6 +1,5 @@
 def main():
-    start = int(input())
-    end = int(input())
+    start, end = [int(input()) for _ in range(2)]
 
     for i in range(start, end + 1):
         print(i, end=" ")
