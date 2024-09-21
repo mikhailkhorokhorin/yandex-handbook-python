@@ -1,13 +1,9 @@
 def main():
-    print("Как Вас зовут?")
-    name = input()
+    name = input("Как Вас зовут?\n")
     print(f"Здравствуйте, {name}!")
-    print("Как дела?")
-    mood = input()
-    if mood == "хорошо":
-        print("Я за вас рада!")
-    elif mood == "плохо":
-        print("Всё наладится!")
+    mood = input("Как дела?\n")
+
+    print("Я за вас рада!" if mood == "хорошо" else "Всё наладится!")
 
 
 if __name__ == "__main__":

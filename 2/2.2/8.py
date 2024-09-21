@@ -1,9 +1,5 @@
 def main():
-    speach = input()
-    if "зайка" in speach:
-        print("YES")
-    else:
-        print("NO")
+    print("YES" if "зайка" in input() else "NO")
 
 
 if __name__ == "__main__":

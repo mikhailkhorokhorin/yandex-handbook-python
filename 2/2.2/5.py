@@ -1,14 +1,10 @@
 def main():
-    n = int(input())
-    m = int(input())
+    n, m = [int(input()) for _ in range(2)]
 
     p = 7 - 3 + 2 + n
     v = 6 + 3 + 5 - 2 + m
 
-    if p > v:
-        print("Петя")
-    else:
-        print("Вася")
+    print("Петя" if p > v else "Вася")
 
 
 if __name__ == "__main__":

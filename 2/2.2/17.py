@@ -1,7 +1,5 @@
 def main():
-    a = float(input())
-    b = float(input())
-    c = float(input())
+    a, b, c = [float(input()) for _ in range(3)]
 
     if a == b == c == 0:
         print("Infinite solutions")
@@ -21,7 +19,6 @@ def main():
             x1 = (-b + D ** 0.5) / (2 * a)
             x2 = (-b - D ** 0.5) / (2 * a)
             print(f"{(min(x1, x2)):.2f}", f"{(max(x1, x2)):.2f}")
-
         else:
             print("No solution")
 
