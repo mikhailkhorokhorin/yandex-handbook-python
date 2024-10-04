@@ -7,10 +7,7 @@ def find():
 
 
 def main():
-    res = 0
-    for x in range(int(input())):
-        res += find()
-    print(res)
+    print(find() for x in range(int(input())))
 
 
 if __name__ == "__main__":
