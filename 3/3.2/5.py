@@ -1,9 +1,8 @@
 def main():
     n, m = [int(input()) for _ in range(2)]
-    semolina = set([input() for _ in range(n)])
-    oatmeal = set([input() for _ in range(m)])
-    both = semolina ^ oatmeal
-    print(len(both) if len(both) else "Таких нет")
+    names = [input() for _ in range(n + m)]
+    names = [i for i in names if names.count(i) == 1]
+    print(len(names) if len(names) else "Таких нет")
 
 
 if __name__ == "__main__":

@@ -1,13 +1,22 @@
-def div(x):
-    return sorted({i for d in range(2, int(x ** 0.5) + 1) if x % d == 0 for i in (d, x // d)})
+def NOD(a, b):
+    while a != 0 and b != 0:
+        if a > b:
+            a %= b
+        else:
+            b %= a
+    return a + b
 
 
 def main():
-    string = list(map(int, input().split("; ")))
-    for i in string:
-        res = set(string) - set(div(i))
-        print(f"{i} - ", end="")
-        print(*res, sep=", ")
+    line = sorted(set(map(int, input().split("; "))))
+    res = {str(i): [] for i in line}
+    for i in line:
+        for j in line:
+            if i != j and NOD(i, j) == 1:
+                res[str(i)].extend([str(j)])
+        if len(res[str(i)]):
+            print(f"{i} - ", end="")
+            print(", ".join(res[str(i)]))
 
 
 if __name__ == "__main__":
