@@ -7,7 +7,7 @@ def find():
 
 
 def main():
-    print(find() for x in range(int(input())))
+    print(sum([find() for _ in range(int(input()))]))
 
 
 if __name__ == "__main__":

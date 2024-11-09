@@ -1,8 +1,11 @@
-candies = int(input())
-in_bag = int(input())
+def main():
+    candies, in_bag = [int(input()) for _ in range(2)]
 
-spended = in_bag // candies
-saved = in_bag % candies
+    spended = in_bag // candies
+    saved = in_bag % candies
 
-print(spended)
-print(saved)
+    print(spended, saved, sep="\n")
+
+
+if __name__ == "__main__":
+    main()

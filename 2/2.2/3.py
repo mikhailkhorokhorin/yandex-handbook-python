@@ -1,9 +1,8 @@
-n = int(input())
-m = int(input())
-k = int(input())
-if n > m and n > k:
-    print("Петя")
-elif m > n and m > k:
-    print("Вася")
-elif k > n and k > m:
-    print("Толя")
+def main():
+    d = {"Петя": int(input()), "Вася": int(input()), "Толя": int(input())}
+    sorted_d = sorted(d.items(), key=lambda x: x[1])[::-1]
+    print(sorted_d[0][0])
+
+
+if __name__ == "__main__":
+    main()

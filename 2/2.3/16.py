@@ -1,6 +1,5 @@
 def main():
-    s = input()
-    print("YES" if s == s[::-1] else "NO")
+    print("YES" if (s := input()) == s[::-1] else "NO")
 
 
 if __name__ == "__main__":

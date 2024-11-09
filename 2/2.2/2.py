@@ -1,6 +1,7 @@
-n = int(input())
-m = int(input())
-if n > m:
-    print("Петя")
-elif m > n:
-    print("Вася")
+def main():
+    n, m = [int(input()) for _ in range(2)]
+    print("Петя" if n > m else "Вася")
+
+
+if __name__ == "__main__":
+    main()

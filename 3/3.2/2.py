@@ -1,5 +1,5 @@
 def main():
-    print(int(input()) + int(input(), 2))
+    print(*(set(input()) & set(input())), sep="")
 
 
 if __name__ == "__main__":
