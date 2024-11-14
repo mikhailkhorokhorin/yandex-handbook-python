@@ -1,5 +1,2 @@
-def main():
-    pass
-    
-if __name__ == "__main__":
-    main()
+def split_numbers(line: str) -> tuple:
+    return tuple(map(int, line.split()))

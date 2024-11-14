@@ -1,5 +1,2 @@
-def main():
-    pass
-    
-if __name__ == "__main__":
-    main()
+def number_length(num: int) -> int:
+    return len(str(abs(num)))
