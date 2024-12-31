@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0a4fd79-8ed3-443f-bf35-a102ee648dee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2/2.1/1.py" beforeDir="false" afterPath="$PROJECT_DIR$/2/2.1/1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2/2.1/10.py" beforeDir="false" afterPath="$PROJECT_DIR$/2/2.1/10.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2/2.1/11.py" beforeDir="false" afterPath="$PROJECT_DIR$/2/2.1/11.py" afterDir="false" />
