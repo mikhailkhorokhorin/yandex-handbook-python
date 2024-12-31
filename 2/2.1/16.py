@@ -1,4 +1,7 @@
-a = int(input())
-b = int(input())
-c = int(input())
-print('{:.2f}'.format((b - a) / c))
+# Доставка
+def main():
+    print(f"{((-int(input()) + int(input())) / int(input())):.2f}")
+
+
+if __name__ == "__main__":
+    main()

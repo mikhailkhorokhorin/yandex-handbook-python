@@ -1,3 +1,7 @@
-print("Как Вас зовут?")
-name = input()
-print(f"Привет, {name}")
+# Привет, всем!
+def main():
+    print(f"Привет, {input("Как Вас зовут?\n")}")
+
+
+if __name__ == "__main__":
+    main()

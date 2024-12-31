@@ -1,3 +1,7 @@
-n = int(input())
-for i in range(n):
-    print("Купи слона!")
+# Делу — время, потехе — час
+def main():
+    print(*["Купи слона!" for _ in range(int(input()))], sep="\n")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,4 +1,8 @@
-n = int(input())
-message = input()
-for i in range(n):
-    print(f"Я больше никогда не буду писать \"{message}\"!")
+# Наказание
+def main():
+    n, message = int(input()), input()
+    print(*[f"Я больше никогда не буду писать \"{message}\"!" for _ in range(n)], sep="\n")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,3 +1,7 @@
-n = int(input())
-m = int(input())
-print(n * m // 2)
+# Деловая колбаса
+def main():
+    print(int(input()) * int(input()) // 2)
+
+
+if __name__ == "__main__":
+    main()
