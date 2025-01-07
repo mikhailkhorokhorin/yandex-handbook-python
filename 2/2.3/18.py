@@ -1,17 +1,16 @@
-def main():
-    n = int(input())
-    d = []
-    div = 2
-    if n < 2:
-        print(n)
-    while n > 1:
-        if n % div == 0:
-            d.append(div)
-            n //= div
-        else:
-            div += 1
+# Простая задача 2.0
+def main() -> None:
+    number, multipliers, divider = int(input()), [], 2
+    print(number) if number < 2 else ...
 
-    print(*d, sep=" * ")
+    while number > 1:
+        if number % divider == 0:
+            multipliers.append(divider)
+            number //= divider
+        else:
+            divider += 1
+
+    print(*multipliers, sep=" * ")
 
 
 if __name__ == "__main__":

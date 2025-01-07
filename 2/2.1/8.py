@@ -1,5 +1,5 @@
 # Наказание
-def main():
+def main() -> None:
     n, message = int(input()), input()
     print(*[f"Я больше никогда не буду писать \"{message}\"!" for _ in range(n)], sep="\n")
 

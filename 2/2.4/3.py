@@ -1,7 +1,7 @@
-def main():
+# Новогоднее настроение
+def main() -> None:
     number = 1
-    n = int(input())
-    for i in range(1, n + 1):
+    for i in range(1, (n := int(input())) + 1):
         for j in range(i):
             if number - 1 < n:
                 print(number, end=" ")

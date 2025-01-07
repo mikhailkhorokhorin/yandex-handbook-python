@@ -1,6 +1,7 @@
-def main():
-    n = input()
-    print(*[f"{n.split().index(s) + 1}. {s}" for s in n.split()], sep="\n")
+# Автоматизация списка
+def main() -> None:
+    line = input()
+    print(*[f"{line.split().index(word) + 1}. {word}" for word in line.split()], sep="\n")
 
 
 if __name__ == "__main__":

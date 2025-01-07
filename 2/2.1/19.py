@@ -1,5 +1,5 @@
 # Украшение чека
-def main():
+def main() -> None:
     name = input()
     coast, weight, money = [int(input()) for _ in range(3)]
     print("=" * 16 + "Чек" + "=" * 16)

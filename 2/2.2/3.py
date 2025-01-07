@@ -1,9 +1,9 @@
-n = int(input())
-m = int(input())
-k = int(input())
-if n > m and n > k:
-    print("Петя")
-elif m > n and m > k:
-    print("Вася")
-elif k > n and k > m:
-    print("Толя")
+# Кто быстрее на этот раз?
+def main() -> None:
+    rating = {"Петя": int(input()), "Вася": int(input()), "Толя": int(input())}
+    sorted_rating = sorted(rating.items(), key=lambda x: x[1])[::-1]
+    print(sorted_rating[0][0])
+
+
+if __name__ == "__main__":
+    main()

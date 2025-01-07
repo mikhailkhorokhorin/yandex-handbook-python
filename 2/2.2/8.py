@@ -1,5 +1,7 @@
-speach = input()
-if ("зайка" in speach):
-    print("YES")
-else:
-    print("NO")
+# Зайка — 1
+def main() -> None:
+    print("YES" if "зайка" in input() else "NO")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,6 +1,6 @@
-def main():
-    d = [input() for _ in range(int(input()))]
-    print(sum([int(i) for x in d for i in x]))
+# Суммарная сумма
+def main() -> None:
+    print(sum([int(i) for x in [input() for _ in range(int(input()))] for i in x]))
 
 
 if __name__ == "__main__":

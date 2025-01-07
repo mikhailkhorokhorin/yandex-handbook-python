@@ -1,15 +1,13 @@
-def NOD(a, b):
-    while a != 0 and b != 0:
-        if a > b:
-            a %= b
-        else:
-            b %= a
-    return a + b
+# НОК
+def GCD(num1: int, num2: int) -> int:
+    while num1 != 0 and num2 != 0:
+        num1, num2 = (num1 % num2, num2) if num1 > num2 else (num1, num2 % num1)
+    return num1 + num2
 
 
-def main():
-    a, b = [int(input()) for _ in range(2)]
-    print(a * b // NOD(a, b))
+def main() -> None:
+    num1, num2 = [int(input()) for _ in range(2)]
+    print(num1 * num2 // GCD(num1, num2))
 
 
 if __name__ == "__main__":

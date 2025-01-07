@@ -1,7 +1,8 @@
-def main():
-    s = input()
-    for i in range(int(input())):
-        print(s)
+# Излишняя автоматизация 2.0
+def main() -> None:
+    string = input()
+    for _ in range(int(input())):
+        print(string)
 
 
 if __name__ == "__main__":

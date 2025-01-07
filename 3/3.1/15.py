@@ -1,18 +1,16 @@
-def NOD(a, b):
-    while a != 0 and b != 0:
-        if a > b:
-            a %= b
-        else:
-            b %= a
-    return a + b
+# НОД 3.0
+def GCD(num1: int, num2: int) -> int:
+    while num1 != 0 and num2 != 0:
+        num1, num2 = (num1 % num2, num2) if num1 > num2 else (num1, num2 % num1)
+    return num1 + num2
 
 
-def main():
-    d = list(map(int, input().split()))
-    nod = 0
-    for i in range(len(d)):
-        nod = NOD(nod, d[i])
-    print(nod)
+def main() -> None:
+    numbers = list(map(int, input().split()))
+    gcd = 0
+    for i in range(len(numbers)):
+        gcd = GCD(gcd, numbers[i])
+    print(gcd)
 
 
 if __name__ == "__main__":

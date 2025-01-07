@@ -1,10 +1,6 @@
-def main():
-    n = int(input())
-    k = 0
-    for i in range(n):
-        if 'зайка' in input():
-            k += 1
-    print(k)
+# Зайка - 4
+def main() -> None:
+    print(sum([1 for _ in range(int(input())) if "зайка" in input()]))
 
 
 if __name__ == "__main__":

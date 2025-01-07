@@ -1,5 +1,5 @@
 # Деловая колбаса
-def main():
+def main() -> None:
     print(int(input()) * int(input()) // 2)
 
 

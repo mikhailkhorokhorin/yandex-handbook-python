@@ -1,4 +1,5 @@
-def main():
+# А и Б сидели на трубе
+def main() -> None:
     print(sum(list(map(int, input().split()))))
 
 

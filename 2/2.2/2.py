@@ -1,6 +1,7 @@
-n = int(input())
-m = int(input())
-if n > m:
-    print("Петя")
-elif m > n:
-    print("Вася")
+# Кто быстрее?
+def main() -> None:
+    print("Петя" if int(input()) > int(input()) else "Вася")
+
+
+if __name__ == "__main__":
+    main()

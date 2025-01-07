@@ -1,1 +1,2 @@
-''.join([i * j for i, j in rle])
+# RLE наоборот
+"".join([i * j for i, j in rle])

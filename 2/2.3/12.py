@@ -1,5 +1,6 @@
-def main():
-    print(max([int(x) for x in input()]))
+# Сильная цифра
+def main() -> None:
+    print(max([int(i) for i in input()]))
 
 
 if __name__ == "__main__":

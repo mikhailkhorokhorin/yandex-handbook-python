@@ -1,5 +1,6 @@
-def main():
-    print(sum([int(x) for x in input()]))
+# Цифровая сумма
+def main() -> None:
+    print(sum([int(i) for i in input()]))
 
 
 if __name__ == "__main__":

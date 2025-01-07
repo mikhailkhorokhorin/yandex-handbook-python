@@ -1,5 +1,5 @@
 # Сдача 10
-def main():
+def main() -> None:
     print(-int(input(), 2) + int(input()))
 
 

@@ -1,5 +1,5 @@
 # Доставка
-def main():
+def main() -> None:
     print(f"{((-int(input()) + int(input())) / int(input())):.2f}")
 
 

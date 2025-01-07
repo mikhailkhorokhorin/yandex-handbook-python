@@ -1,16 +1,11 @@
-def main():
-    num = 500
-    k = 250
-
-    print(num)
-    while (s := input()) != "Угадал!":
-        if s == "Меньше":
-            num -= k
-        elif s == "Больше":
-            num += k
-        if k >= 2:
-            k = (k + 1) // 2
-        print(num)
+# Игра в «Угадайку»
+def main() -> None:
+    number, half = 500, 250
+    print(number)
+    while (string := input()) != "Угадал!":
+        number += half if string == "Больше" else -half if string == "Меньше" else 0
+        half = (half + 1) // 2 if half >= 2 else ...
+        print(number)
 
 
 if __name__ == "__main__":

@@ -1,12 +1,9 @@
-def main():
+# Числовой прямоугольник
+def main() -> None:
     n, m = [int(input()) for _ in range(2)]
-    num = 0
     width = len(str(n * m))
-    for _ in range(n):
-        for _ in range(m):
-            num += 1
-            print(f"{num:>{width}}", end=" ")
-        print()
+    for i in range(1, n * m + 1):
+        print(f"{i:>{width}} ", end=" " * (i % m == 0) + "\n" * (i % m == 0 and i != n * m))
 
 
 if __name__ == "__main__":

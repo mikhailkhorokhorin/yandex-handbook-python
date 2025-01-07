@@ -1,6 +1,6 @@
-def main():
-    for i in input():
-        print(i)
+# Кручу-верчу
+def main() -> None:
+    print("\n".join([i for i in input()]))
 
 
 if __name__ == "__main__":

@@ -1,13 +1,14 @@
-def find():
-    res = 0
-    while (s := input()) != "ВСЁ":
-        if s == "зайка":
-            res = 1
-    return res
+# Зайка — 5
+def find() -> int:
+    founded = 0
+    while (string := input()) != "ВСЁ":
+        if string == "зайка":
+            founded = 1
+    return founded
 
 
-def main():
-    print(find() for x in range(int(input())))
+def main() -> None:
+    print(sum([find() for _ in range(int(input()))]))
 
 
 if __name__ == "__main__":

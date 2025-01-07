@@ -1,7 +1,7 @@
-def main():
+# RLE
+def main() -> None:
     line = input()
     letter, count = line[0], 1
-
     for i in line[1:]:
         if i == letter:
             count += 1

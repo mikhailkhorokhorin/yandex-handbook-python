@@ -1,5 +1,9 @@
-s1 = input()
-s2 = input()
+# Властелин Чисел: Возвращение Цезаря
+def main() -> None:
+    num1, num2 = input(), input()
+    combinations = sorted([int(x) for x in (num1[0], num1[1], num2[0], num2[1])])
+    print(f"{combinations[-1]}{(sum(combinations) - combinations[-1] - combinations[0]) % 10}{combinations[0]}")
 
-num = sorted([int(x) for x in (s1[0], s1[1], s2[0], s2[1])])
-print(f"{max(num)}{(sum(num) - max(num) - min(num)) % 10}{min(num)}")
+
+if __name__ == "__main__":
+    main()

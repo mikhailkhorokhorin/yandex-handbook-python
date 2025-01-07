@@ -1,16 +1,19 @@
-def main():
-    number = 1
+# Новогоднее настроение 2.0
+def main() -> None:
     n = int(input())
-    tree = []
-    for i in range(1, n + 1):
-        line = []
-        for j in range(i):
-            if number - 1 < n:
-                line.append(number)
-                number += 1
-        tree.append(line)
-    tree = [x for x in tree if x != []]
-    print(tree)
+    max_length, number, line = 0, 0, 1
+    while number < n:
+        length = " ".join(str(i) for i in range(number + 1, min(number + line + 1, n + 1)))
+        max_length = max(len(length), max_length)
+        number += line
+        line += 1
+    number, line = 0, 1
+    while number < n:
+        answer = " ".join(str(i) for i in range(number + 1, min(number + line + 1, n + 1)))
+        print(f"{answer:^{max_length}}")
+        number += line
+        line += 1
+
 
 if __name__ == "__main__":
     main()

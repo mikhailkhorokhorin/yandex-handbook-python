@@ -1,5 +1,5 @@
 # Детский сад — штаны на лямках
-def main():
+def main() -> None:
     name, number = [input() for _ in range(2)]
     print(f"Группа №{number[0]}.")
     print(f"{number[2]}. {name}.")

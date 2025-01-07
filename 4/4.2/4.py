@@ -1,0 +1,15 @@
+# Имя of the month 2.0
+def month(num: int, lang: str = "ru") -> str:
+    MONTH = {
+        "en": [
+            "January", "February", "March",
+            "April", "May", "June",
+            "July", "August", "September",
+            "October", "November", "December"],
+        "ru": [
+            "Январь", "Февраль", "Март",
+            "Апрель", "Май", "Июнь",
+            "Июль", "Август", "Сентябрь",
+            "Октябрь", "Ноябрь", "Декабрь"]
+        }
+    return MONTH[lang][num - 1]

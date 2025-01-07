@@ -1,7 +1,6 @@
-def main():
-    porridges = ["Манная", "Гречневая", "Пшённая", "Овсяная", "Рисовая"]
-    for i in range(int(input())):
-        print(porridges[i % 5])
+# Меню питания
+def main() -> None:
+    print(*[["Манная", "Гречневая", "Пшённая", "Овсяная", "Рисовая"][i % 5] for i in range(int(input()))], sep="\n")
 
 
 if __name__ == "__main__":

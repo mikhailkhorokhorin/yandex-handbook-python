@@ -1,14 +1,13 @@
-def main():
+# Частотный анализ на минималках
+def main() -> None:
     res = ""
     while (s := input()) != 'ФИНИШ':
         res += s
     line = str(res).lower().replace(" ", "")
-    m, letter = 0, ""
-
-    for i in set(line):
-        if line.count(i) > m:
-            letter = i
-            m = line.count(i)
+    count, letter = 0, ""
+    for char in set(line):
+        if line.count(char) > count:
+            letter, count = char, line.count(char)
     print(letter)
 
 

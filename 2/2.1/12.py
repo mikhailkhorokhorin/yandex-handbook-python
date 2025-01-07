@@ -1,10 +1,10 @@
 # Интересное сложение
-def main():
-    n, m = [int(input()) for _ in range(2)]
-    s1 = (n // 100 + m // 100) % 10
-    s2 = ((n // 10) % 10 + (m // 10) % 10) % 10
-    s3 = (n % 10 + m % 10) % 10
-    print(f"{s1}{s2}{s3}")
+def main() -> None:
+    num1, num2 = [int(input()) for _ in range(2)]
+    ind2 = (num1 // 100 + num2 // 100) % 10
+    ind1 = ((num1 // 10) % 10 + (num2 // 10) % 10) % 10
+    ind0 = (num1 % 10 + num2 % 10) % 10
+    print(f"{ind2}{ind1}{ind0}")
 
 
 if __name__ == "__main__":

@@ -1,6 +1,8 @@
-year = int(input())
+# Сила прокрастинации
+def main() -> None:
+    year = int(input())
+    print("YES" if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0 else "NO")
 
-if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
-    print("YES")
-else:
-    print("NO")
+
+if __name__ == "__main__":
+    main()

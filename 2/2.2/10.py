@@ -1,8 +1,10 @@
-n = int(input())
+# Лучшая защита — шифрование
+def main() -> None:
+    number = int(input())
+    ind1 = number % 10 + (number // 10) % 10
+    ind0 = number // 100 + (number // 10) % 10
+    print(f"{ind1}{ind0}" if ind1 >= ind0 else f"{ind0}{ind1}")
 
-s1 = n % 10 + (n // 10) % 10
-s2 = n // 100 + (n // 10) % 10
-if s1 >= s2:
-    print(f"{s1}{s2}")
-else:
-    print(f"{s2}{s1}")
+
+if __name__ == "__main__":
+    main()

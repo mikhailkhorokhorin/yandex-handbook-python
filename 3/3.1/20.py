@@ -1,29 +1,30 @@
-def main():
+# Польский калькулятор — 2
+def f(n: int) -> int:
+    return n * f(n - 1) if n > 1 else 1
+
+
+def main() -> None:
     elements = list(input().split())
-    res = []
+    result = []
     for i in elements:
         if i.isdigit():
-            res.append(int(i))
+            result.append(int(i))
         elif i == '~':
-            res[-1] *= -1
+            result[-1] *= -1
         elif i == "!":
-            res[-1] = f(res[-1])
+            result[-1] = f(result[-1])
         elif i == "#":
-            res.append(res[-1])
+            result.append(result[-1])
         elif i == "/":
-            a = res.pop()
-            res[-1] //= a
+            a = result.pop()
+            result[-1] //= a
         elif i == "@":
-            a = res.pop(-3)
-            res.append(a)
+            a = result.pop(-3)
+            result.append(a)
         else:
-            a = res.pop()
-            exec("res[-1] " + i + "=a")
-    print(*res)
-
-
-def f(n):
-    return n * f(n - 1) if n > 1 else 1
+            a = result.pop()
+            exec("result[-1] " + i + "=a")
+    print(*result)
 
 
 if __name__ == "__main__":

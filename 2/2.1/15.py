@@ -1,5 +1,5 @@
 # В ожидании доставки
-def main():
+def main() -> None:
     n, m, t = [int(input()) for _ in range(3)]
     hours = t // 60
     m += t % 60

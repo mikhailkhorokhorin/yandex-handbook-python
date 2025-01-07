@@ -1,5 +1,5 @@
 # Привет, всем!
-def main():
+def main() -> None:
     print(f"Привет, {input("Как Вас зовут?\n")}")
 
 

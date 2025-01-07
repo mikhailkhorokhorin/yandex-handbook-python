@@ -1,14 +1,12 @@
-def main():
-    x, y = 0, 0
-    xcord = {"ВОСТОК": 1, "ЗАПАД": -1}
-    ycord = {"СЕВЕР": 1, "ЮГ": -1}
+# Маршрут построен
+def main() -> None:
+    x = y = 0
+    x_dir = {"ВОСТОК": 1, "ЗАПАД": -1}
+    y_dir = {"СЕВЕР": 1, "ЮГ": -1}
 
-    while (s := input()) != "СТОП":
-        val = int(input())
-        if s in xcord.keys():
-            x += val * xcord[s]
-        else:
-            y += val * ycord[s]
+    while (direction := input()) != "СТОП":
+        value = int(input())
+        (x, y) = (x + value * x_dir[direction], y) if direction in x_dir else (x, y + value * y_dir[direction])
     print(y, x, sep="\n")
 
 

@@ -1,5 +1,5 @@
 # Сдача
-def main():
+def main() -> None:
     print(int(float(input()) - 2.5 * 38))
 
 

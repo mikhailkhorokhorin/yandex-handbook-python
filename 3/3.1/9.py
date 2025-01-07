@@ -1,7 +1,7 @@
-def main():
-    while (s := input()) != "":
-        if s[0] != "#":
-            print(s[:s.index("#"):] if "#" in s else s)
+# Без комментариев
+def main() -> None:
+    while (string := input()) != "":
+        print(string[:string.index("#"):] if "#" in string else string) if string[0] != "#" else ...
 
 
 if __name__ == "__main__":

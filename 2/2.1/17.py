@@ -1,5 +1,5 @@
 # Ошибка кассового аппарата
-def main():
+def main() -> None:
     print(int(input()) + int(input(), 2))
 
 

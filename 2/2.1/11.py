@@ -1,7 +1,7 @@
 # Автоматизация игры
-def main():
-    n = input()
-    print(n[1] + n[0] + n[3] + n[2])
+def main() -> None:
+    num = input()
+    print(num[1] + num[0] + num[3] + num[2])
 
 
 if __name__ == "__main__":

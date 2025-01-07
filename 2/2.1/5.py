@@ -1,5 +1,5 @@
 # Магазин
-def main():
+def main() -> None:
     print(-int(input()) * int(input()) + int(input()))
 
 

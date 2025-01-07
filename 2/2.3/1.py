@@ -1,8 +1,6 @@
-def main():
-    k = 0
-    while (s := input()) != "Три!":
-        k += 1
-    for i in range(k):
+# Раз, два, три! Ёлочка, гори!
+def main() -> None:
+    while input() != "Три!":
         print("Режим ожидания...")
     print("Ёлочка, гори!")
 

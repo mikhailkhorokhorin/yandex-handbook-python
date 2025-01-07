@@ -1,10 +1,9 @@
-def main():
-    discount, full_coast = 0, 0
+# Внимание! Акция!
+def main() -> None:
+    discount = full_coast = 0
     while (s := float(input())) != 0:
-        if s >= 500:
-            discount += s
-        else:
-            full_coast += s
+        discount += s * (s >= 500)
+        full_coast += s * (s < 500)
     print(full_coast + discount * 9 / 10)
 
 

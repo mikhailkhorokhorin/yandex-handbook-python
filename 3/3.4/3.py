@@ -1,13 +1,10 @@
-from itertools import count
+# Рациональная считалочка
+from itertools import count, takewhile
 
 
-def main():
-    start, end, step = list(map(float, input().split()))
-    for value in count(start, step):
-        if value <= end:
-            print(f'{value:.2f}')
-        else:
-            break
+def main() -> None:
+    start, end, step = map(float, input().split())
+    print(*[f'{value:.2f}' for value in takewhile(lambda x: x <= end, count(start, step))], sep='\n')
 
 
 if __name__ == "__main__":

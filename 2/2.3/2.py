@@ -1,9 +1,9 @@
-def main():
-    k = 0
-    while (s := input()) != "Приехали!":
-        if "зайка" in s:
-            k += 1
-    print(k)
+# Зайка — 3
+def main() -> None:
+    count = 0
+    while (string := input()) != "Приехали!":
+        count += 1 if "зайка" in string else ...
+    print(count)
 
 
 if __name__ == "__main__":

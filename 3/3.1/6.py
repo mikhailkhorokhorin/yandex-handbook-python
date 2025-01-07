@@ -1,4 +1,5 @@
-def main():
+# Зайка — 6
+def main() -> None:
     print(sum([input().count("зайка") for _ in range(int(input()))]))
 
 

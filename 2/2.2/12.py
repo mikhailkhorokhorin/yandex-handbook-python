@@ -1,8 +1,8 @@
-s1 = int(input())
-s2 = int(input())
-s3 = int(input())
+# Музыкальный инструмент
+def main() -> None:
+    side1, side2, side3 = [int(input()) for _ in range(3)]
+    print("YES" if (side1 < side2 + side3) and (side2 < side1 + side3) and (side3 < side1 + side2) else "NO")
 
-if (s1 < s2 + s3) and (s2 < s1 + s3) and (s3 < s1 + s2):
-    print("YES")
-else:
-    print("NO")
+
+if __name__ == "__main__":
+    main()
