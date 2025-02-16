@@ -88,8 +88,7 @@ def main() -> None:
         "Ф": "F", "Х": "KH", "Ц": "TC",
         "Ч": "CH", "Ш": "SH", "Щ": "SHCH",
         "Ы": "Y", "Э": "E", "Ю": "IU",
-        "Я": "IA", "Ь": "", "Ъ": "",
-        }
+        "Я": "IA", "Ь": "", "Ъ": ""}
     data, translit_data = "", ""
     with open("cyrillic.txt", encoding="UTF-8") as file:
         for line in file:

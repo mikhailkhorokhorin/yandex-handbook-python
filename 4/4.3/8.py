@@ -1,3 +1,4 @@
+# Генератор Фибоначчи
 def fibonacci(num: int) -> int:
     value1, value2 = 0, 1
     for _ in range(num):

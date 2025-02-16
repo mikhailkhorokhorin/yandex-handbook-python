@@ -21,7 +21,7 @@ def make_equation(*args) -> str:
     if len(args) == 1:
         return str(args[0])
     line = ") * x " + ("- " if args[-1] < 0 else "+ ") + str(args[-1])
-    return "(" + make_equation(*args[:-1]) 
+    return "(" + make_equation(*args[:-1]) + line
 ```
 
 ### Декор результата
@@ -79,6 +79,16 @@ def same_type(function):
     return decorator
 
 
+def fibonacci(num: int) -> int:
+    value1, value2 = 0, 1
+    for _ in range(num):
+        yield value1
+        value1, value2 = value2, value1 + value2
+```
+
+# Генератор Фибоначчи
+
+```python
 def fibonacci(num: int) -> int:
     value1, value2 = 0, 1
     for _ in range(num):
