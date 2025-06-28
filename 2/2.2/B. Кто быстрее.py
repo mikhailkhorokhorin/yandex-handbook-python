@@ -1,4 +1,3 @@
-# Кто быстрее?
 def main() -> None:
     print("Петя" if int(input()) > int(input()) else "Вася")
 

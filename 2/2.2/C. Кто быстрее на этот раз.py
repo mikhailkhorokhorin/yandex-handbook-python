@@ -1,4 +1,3 @@
-# Кто быстрее на этот раз?
 def main() -> None:
     rating = {"Петя": int(input()), "Вася": int(input()), "Толя": int(input())}
     sorted_rating = sorted(rating.items(), key=lambda x: x[1])[::-1]

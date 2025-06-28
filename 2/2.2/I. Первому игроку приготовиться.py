@@ -1,4 +1,3 @@
-# Первому игроку приготовиться
 def main() -> None:
     print(min(input(), input(), input()))
 

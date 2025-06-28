@@ -1,4 +1,3 @@
-# Лучшая защита — шифрование
 def main() -> None:
     number = int(input())
     ind1 = number % 10 + (number // 10) % 10

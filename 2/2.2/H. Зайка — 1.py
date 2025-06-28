@@ -1,4 +1,3 @@
-# Зайка — 1
 def main() -> None:
     print("YES" if "зайка" in input() else "NO")
 
