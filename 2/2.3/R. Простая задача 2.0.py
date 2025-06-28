@@ -1,4 +1,3 @@
-# Простая задача 2.0
 def main() -> None:
     number, multipliers, divider = int(input()), [], 2
     print(number) if number < 2 else ...

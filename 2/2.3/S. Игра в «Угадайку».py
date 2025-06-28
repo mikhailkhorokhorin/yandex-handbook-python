@@ -1,4 +1,3 @@
-# Игра в «Угадайку»
 def main() -> None:
     number, half = 500, 250
     print(number)

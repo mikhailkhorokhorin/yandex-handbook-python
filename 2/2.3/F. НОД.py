@@ -1,4 +1,3 @@
-# НОД
 def main() -> None:
     num1, num2 = [int(input()) for _ in range(2)]
     while num1 != 0 and num2 != 0:

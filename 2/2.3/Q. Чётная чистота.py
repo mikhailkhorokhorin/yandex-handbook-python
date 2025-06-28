@@ -1,4 +1,3 @@
-# Чётная чистота
 def main() -> None:
     print(*[int(i) for i in input() if int(i) % 2 != 0], sep="")
 

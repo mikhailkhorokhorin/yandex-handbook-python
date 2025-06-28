@@ -1,4 +1,3 @@
-# Внимание! Акция!
 def main() -> None:
     discount = full_coast = 0
     while (s := float(input())) != 0:

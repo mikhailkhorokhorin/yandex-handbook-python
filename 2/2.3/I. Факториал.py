@@ -1,4 +1,3 @@
-# Факториал
 def f(n: int) -> int:
     return n * f(n - 1) if n > 1 else 1
 

@@ -1,4 +1,3 @@
-# Цифровая сумма
 def main() -> None:
     print(sum([int(i) for i in input()]))
 

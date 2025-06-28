@@ -1,4 +1,3 @@
-# Маршрут построен
 def main() -> None:
     x = y = 0
     x_dir = {"ВОСТОК": 1, "ЗАПАД": -1}
@@ -6,7 +5,11 @@ def main() -> None:
 
     while (direction := input()) != "СТОП":
         value = int(input())
-        (x, y) = (x + value * x_dir[direction], y) if direction in x_dir else (x, y + value * y_dir[direction])
+        (x, y) = (
+            (x + value * x_dir[direction], y)
+            if direction in x_dir
+            else (x, y + value * y_dir[direction])
+        )
     print(y, x, sep="\n")
 
 
