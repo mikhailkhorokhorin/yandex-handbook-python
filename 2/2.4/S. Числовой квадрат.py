@@ -1,4 +1,3 @@
-# Числовой квадрат
 def main() -> None:
     n = int(input())
     width = len(str(n // 2 + 1))

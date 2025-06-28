@@ -1,4 +1,3 @@
-# Максимальная сумма
 def main() -> None:
     rating = {}
     for _ in range(int(input())):

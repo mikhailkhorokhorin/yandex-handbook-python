@@ -1,6 +1,5 @@
-# Простая задача 3.0
 def is_prime(num: int) -> bool:
-    return num > 1 and all(num % i != 0 for i in range(2, int(num ** 0.5) + 1))
+    return num > 1 and all(num % i != 0 for i in range(2, int(num**0.5) + 1))
 
 
 def main() -> None:

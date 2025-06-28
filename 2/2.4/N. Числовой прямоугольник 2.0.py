@@ -1,4 +1,3 @@
-# Числовой прямоугольник 2.0
 def main() -> None:
     n, m = [int(input()) for _ in range(2)]
     width = len(str(n * m))

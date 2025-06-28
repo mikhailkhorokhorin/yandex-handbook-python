@@ -1,4 +1,3 @@
-# Зайка — 5
 def find() -> int:
     founded = 0
     while (string := input()) != "ВСЁ":

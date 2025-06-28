@@ -1,4 +1,3 @@
-# Математическая выгода
 def main() -> None:
     n = int(input())
     max_i = max_num = 0
