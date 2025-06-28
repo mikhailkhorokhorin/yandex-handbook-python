@@ -1,4 +1,3 @@
-# Шарики и ручки
 def main() -> None:
     red, _, blue = [int(input()) for _ in range(3)]
     print(red + blue + 1)

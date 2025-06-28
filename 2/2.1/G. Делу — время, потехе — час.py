@@ -1,4 +1,3 @@
-# Делу — время, потехе — час
 def main() -> None:
     print(*["Купи слона!" for _ in range(int(input()))], sep="\n")
 

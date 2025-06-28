@@ -1,4 +1,3 @@
-# Деловая колбаса
 def main() -> None:
     print(int(input()) * int(input()) // 2)
 

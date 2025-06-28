@@ -1,4 +1,3 @@
-# Чек
 def main() -> None:
     name = input()
     coast, weight, money = [int(input()) for _ in range(3)]

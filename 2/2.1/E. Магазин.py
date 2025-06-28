@@ -1,4 +1,3 @@
-# Магазин
 def main() -> None:
     print(-int(input()) * int(input()) + int(input()))
 

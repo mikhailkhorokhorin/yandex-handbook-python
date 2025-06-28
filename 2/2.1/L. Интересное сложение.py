@@ -1,4 +1,3 @@
-# Интересное сложение
 def main() -> None:
     num1, num2 = [int(input()) for _ in range(2)]
     ind2 = (num1 // 100 + num2 // 100) % 10

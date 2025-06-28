@@ -1,4 +1,3 @@
-# Сдача 10
 def main() -> None:
     print(-int(input(), 2) + int(input()))
 
