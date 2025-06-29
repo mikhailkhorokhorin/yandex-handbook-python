@@ -1,7 +1,9 @@
 from itertools import product
 
 
-def postfix(expression: str, variables: list, operators: dict, priorities: dict) -> list:
+def postfix(
+    expression: str, variables: list, operators: dict, priorities: dict
+) -> list:
     stack, result = [], []
     for token in expression.split():
         if token in variables:
@@ -37,9 +39,17 @@ def result(postfix_exp: list, variables: dict) -> int:
 
 def main() -> None:
     operators = {
-        "not": "not", "and": "and", "or": "or",
-        "^": "!=", "->": "<=", "~": "=="}
-    priorities = {key: value for value, key in enumerate(["not", "and", "or", "^", "->", "~", "("])}
+        "not": "not",
+        "and": "and",
+        "or": "or",
+        "^": "!=",
+        "->": "<=",
+        "~": "==",
+    }
+    priorities = {
+        key: value
+        for value, key in enumerate(["not", "and", "or", "^", "->", "~", "("])
+    }
 
     statement = input()
     variables = sorted(set(filter(str.isupper, statement)))

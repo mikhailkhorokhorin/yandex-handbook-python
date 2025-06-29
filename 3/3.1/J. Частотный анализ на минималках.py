@@ -1,6 +1,6 @@
 def main() -> None:
     res = ""
-    while (s := input()) != 'ФИНИШ':
+    while (s := input()) != "ФИНИШ":
         res += s
     line = str(res).lower().replace(" ", "")
     count, letter = 0, ""

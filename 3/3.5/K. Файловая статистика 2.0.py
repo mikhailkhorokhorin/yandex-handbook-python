@@ -13,7 +13,8 @@ def main() -> None:
         "min": min(numbers),
         "max": max(numbers),
         "sum": sum(numbers),
-        "average": round(sum(numbers) / len(numbers), 2)}
+        "average": round(sum(numbers) / len(numbers), 2),
+    }
     with open(file_out, "w", encoding="UTF-8") as file:
         json.dump(data, file, ensure_ascii=False, indent=4)
 

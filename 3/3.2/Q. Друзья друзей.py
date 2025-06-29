@@ -15,7 +15,9 @@ def main() -> None:
                 friends[friend_key].extend(close_friends[key])
 
     for i in friends:
-        friends[i] = [x for x in set(friends[i]) if x != i and x not in close_friends[i]]
+        friends[i] = [
+            x for x in set(friends[i]) if x != i and x not in close_friends[i]
+        ]
 
     for i in sorted(friends):
         print(f"{i}: {', '.join(sorted(friends[i]))}")

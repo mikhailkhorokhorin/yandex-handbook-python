@@ -10,7 +10,9 @@ class Programmer:
         if self.position == list(self.titles.keys())[-1]:
             self.titles[list(self.titles.keys())[-1]] += 1
         else:
-            self.position = list(self.titles.keys())[list(self.titles).index(self.position) + 1]
+            self.position = list(self.titles.keys())[
+                list(self.titles).index(self.position) + 1
+            ]
 
     def info(self) -> str:
         return f"{self.name} {self.time}ч. {self.money}тгр."

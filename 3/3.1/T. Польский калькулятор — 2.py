@@ -8,7 +8,7 @@ def main() -> None:
     for i in elements:
         if i.isdigit():
             result.append(int(i))
-        elif i == '~':
+        elif i == "~":
             result[-1] *= -1
         elif i == "!":
             result[-1] = f(result[-1])

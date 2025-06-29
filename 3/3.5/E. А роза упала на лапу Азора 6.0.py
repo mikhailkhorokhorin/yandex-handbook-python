@@ -3,7 +3,9 @@ from sys import stdin
 
 def main() -> None:
     data = [string.strip().split() for string in stdin]
-    words = [word for line in data for word in line if word.lower() == word.lower()[::-1]]
+    words = [
+        word for line in data for word in line if word.lower() == word.lower()[::-1]
+    ]
     print(*sorted(set(words)), sep="\n")
 
 

@@ -13,9 +13,12 @@ class NeedCharError(Exception):
     pass
 
 
-def password_validation(password: str, min_length: int = 8,
-                        possible_chars: str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",
-                        at_least_one: bool = str.isdigit):
+def password_validation(
+    password: str,
+    min_length: int = 8,
+    possible_chars: str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",
+    at_least_one: bool = str.isdigit,
+):
     if not isinstance(password, str):
         raise TypeError
     if len(password) < min_length:

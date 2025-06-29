@@ -6,7 +6,8 @@ def order(*args) -> str:
         "Макиато": {"coffee": 2, "milk": 1},
         "Кофе по-венски": {"coffee": 1, "cream": 2},
         "Латте Макиато": {"coffee": 1, "milk": 2, "cream": 1},
-        "Кон Панна": {"coffee": 1, "cream": 1}}
+        "Кон Панна": {"coffee": 1, "cream": 1},
+    }
 
     for grade in args:
         for ingridient in COFFEE[grade]:

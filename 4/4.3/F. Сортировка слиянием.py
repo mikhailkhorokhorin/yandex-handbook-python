@@ -8,4 +8,6 @@ def merge(left: list, right: list) -> list:
 def merge_sort(array: list) -> list:
     if len(array) <= 1:
         return array
-    return merge(merge_sort(array[:len(array) // 2]), merge_sort(array[len(array) // 2:]))
+    return merge(
+        merge_sort(array[: len(array) // 2]), merge_sort(array[len(array) // 2 :])
+    )

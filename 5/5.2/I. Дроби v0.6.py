@@ -3,12 +3,19 @@ class Fraction:
         numerator, denominator = self.__numerator, self.__denominator
         while denominator:
             numerator, denominator = denominator, numerator % denominator
-        self.__numerator, self.__denominator = self.__numerator // numerator, self.__denominator // numerator
+        self.__numerator, self.__denominator = (
+            self.__numerator // numerator,
+            self.__denominator // numerator,
+        )
 
     def __init__(self, *args) -> None:
         args = (args[0], 1) if len(args) == 1 and isinstance(args[0], int) else args
         if isinstance(args[0], str):
-            args = tuple(map(int, args[0].split("/"))) if "/" in args[0] else (int(args[0]), 1)
+            args = (
+                tuple(map(int, args[0].split("/")))
+                if "/" in args[0]
+                else (int(args[0]), 1)
+            )
         self.sign = 1 if args[0] * args[1] >= 0 else -1
         self.__numerator, self.__denominator = map(abs, (args[0], args[1]))
         self.__try_reduce()
@@ -29,8 +36,10 @@ class Fraction:
 
     def __add__(self, other):
         other = Fraction(other) if type(other) is not Fraction else other
-        numerator = (self.sign * self.numerator() * other.denominator() +
-                     other.sign * other.numerator() * self.denominator())
+        numerator = (
+            self.sign * self.numerator() * other.denominator()
+            + other.sign * other.numerator() * self.denominator()
+        )
         denominator = self.denominator() * other.denominator()
         return Fraction(numerator, denominator)
 

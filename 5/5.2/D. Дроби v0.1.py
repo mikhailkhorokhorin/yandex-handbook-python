@@ -3,7 +3,10 @@ class Fraction:
         numerator, denominator = self.__numerator, self.__denominator
         while denominator:
             numerator, denominator = denominator, numerator % denominator
-        self.__numerator, self.__denominator = self.__numerator // numerator, self.__denominator // numerator
+        self.__numerator, self.__denominator = (
+            self.__numerator // numerator,
+            self.__denominator // numerator,
+        )
 
     def __init__(self, *args) -> None:
         args = tuple(map(int, args[0].split("/"))) if isinstance(args[0], str) else args

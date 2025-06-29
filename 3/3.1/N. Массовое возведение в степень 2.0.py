@@ -1,6 +1,6 @@
 def main() -> None:
     numbers, power = list(map(int, input().split())), int(input())
-    print(*[i ** power for i in numbers])
+    print(*[i**power for i in numbers])
 
 
 if __name__ == "__main__":
