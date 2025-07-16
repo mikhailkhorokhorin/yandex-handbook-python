@@ -34,4 +34,4 @@ def process_all_subfolders(root_dir="."):
         process_directory(current_dir)
 
 
-process_all_subfolders(root_dir="2. Базовые конструкции Python")
+process_all_subfolders(root_dir="4. Функции и их особенности в Python")

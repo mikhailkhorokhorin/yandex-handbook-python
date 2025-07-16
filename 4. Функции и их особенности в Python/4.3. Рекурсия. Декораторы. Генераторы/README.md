@@ -1,21 +1,15 @@
-# Рекурсия. Декораторы. Генераторы
-
-### Рекурсивный сумматор
-
+# 4.3. Рекурсия. Декораторы. Генераторы
+### A. Рекурсивный сумматор
 ```python
 def recursive_sum(*args) -> int:
     return 0 if not args else args[0] + recursive_sum(*args[1:])
 ```
-
-### Рекурсивный сумматор цифр
-
+### B. Рекурсивный сумматор цифр
 ```python
 def recursive_digit_sum(num: int) -> int:
     return num % 10 + recursive_digit_sum(num // 10) if num != 0 else 0
 ```
-
-### Многочлен N-ой степени
-
+### C. Многочлен N-ой степени
 ```python
 def make_equation(*args) -> str:
     if len(args) == 1:
@@ -23,9 +17,7 @@ def make_equation(*args) -> str:
     line = ") * x " + ("- " if args[-1] < 0 else "+ ") + str(args[-1])
     return "(" + make_equation(*args[:-1]) + line
 ```
-
-### Декор результата
-
+### D. Декор результата
 ```python
 def answer(function):
     def decorated(*args, **kwargs) -> str:
@@ -33,9 +25,7 @@ def answer(function):
 
     return decorated
 ```
-
-### Накопление результата
-
+### E. Накопление результата
 ```python
 def result_accumulator(func):
     result = []
@@ -49,9 +39,7 @@ def result_accumulator(func):
 
     return decorated
 ```
-
-### Сортировка слиянием
-
+### F. Сортировка слиянием
 ```python
 def merge(left: list, right: list) -> list:
     result = []
@@ -63,11 +51,12 @@ def merge(left: list, right: list) -> list:
 def merge_sort(array: list) -> list:
     if len(array) <= 1:
         return array
-    return merge(merge_sort(array[:len(array) // 2]), merge_sort(array[len(array) // 2:]))
+    return merge(
+        merge_sort(array[: len(array) // 2]),
+        merge_sort(array[len(array) // 2 :]),
+    )
 ```
-
-### Однотипность не порок
-
+### G. Однотипность не порок
 ```python
 def same_type(function):
     def decorator(*args) -> bool:
@@ -77,17 +66,8 @@ def same_type(function):
         return function(*args)
 
     return decorator
-
-
-def fibonacci(num: int) -> int:
-    value1, value2 = 0, 1
-    for _ in range(num):
-        yield value1
-        value1, value2 = value2, value1 + value2
 ```
-
-# Генератор Фибоначчи
-
+### H. Генератор Фибоначчи
 ```python
 def fibonacci(num: int) -> int:
     value1, value2 = 0, 1
@@ -95,19 +75,19 @@ def fibonacci(num: int) -> int:
         yield value1
         value1, value2 = value2, value1 + value2
 ```
-
-### Циклический генератор
-
+### I. Циклический генератор
 ```python
 def cycle(line: list):
     while line:
         for number in line:
             yield number
 ```
-
-### "Выпрямление" списка
-
+### J. Выпрямление списка
 ```python
 def make_linear(old: list) -> list:
-    return [item for i in old for item in (make_linear(i) if isinstance(i, list) else [i])]
+    return [
+        item
+        for i in old
+        for item in (make_linear(i) if isinstance(i, list) else [i])
+    ]
 ```

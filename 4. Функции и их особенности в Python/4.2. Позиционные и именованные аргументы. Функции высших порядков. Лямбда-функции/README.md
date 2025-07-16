@@ -1,27 +1,23 @@
-# Позиционные и именованные аргументы. Функции высших порядков. Лямбда-функции
-
-### Генератор списков
-
+# 4.2. Позиционные и именованные аргументы. Функции высших порядков. Лямбда-функции
+### A. Генератор списков
 ```python
 def make_list(length: int, value: int = 0) -> list:
     return [value] * length
 ```
-
-### Генератор матриц
-
+### B. Генератор матриц
 ```python
 def make_matrix(size, value: int = 0) -> list:
     if isinstance(size, int):
         return [[value for i in range(size)] for j in range(size)]
     return [[value for i in range(size[0])] for j in range(size[1])]
 ```
-
-### Функциональный нод 2.0
-
+### C. Функциональный нод 2.0
 ```python
 def GCD(num1: int, num2: int) -> int:
     while num1 != 0 and num2 != 0:
-        num1, num2 = (num1 % num2, num2) if num1 > num2 else (num1, num2 % num1)
+        num1, num2 = (
+            (num1 % num2, num2) if num1 > num2 else (num1, num2 % num1)
+        )
     return num1 + num2
 
 
@@ -31,34 +27,47 @@ def gcd(*args) -> int:
         result = GCD(result, args[i])
     return result
 ```
-
-### Имя of the month 2.0
-
+### D. Имя of the month 2.0
 ```python
 def month(num: int, lang: str = "ru") -> str:
     MONTH = {
         "en": [
-            "January", "February", "March",
-            "April", "May", "June",
-            "July", "August", "September",
-            "October", "November", "December"],
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December",
+        ],
         "ru": [
-            "Январь", "Февраль", "Март",
-            "Апрель", "Май", "Июнь",
-            "Июль", "Август", "Сентябрь",
-            "Октябрь", "Ноябрь", "Декабрь"]}
+            "Январь",
+            "Февраль",
+            "Март",
+            "Апрель",
+            "Май",
+            "Июнь",
+            "Июль",
+            "Август",
+            "Сентябрь",
+            "Октябрь",
+            "Ноябрь",
+            "Декабрь",
+        ],
+    }
     return MONTH[lang][num - 1]
 ```
-
-### Подготовка данных
-
+### E. Подготовка данных
 ```python
 def to_string(*args, sep: str = " ", end: str = "\n") -> str:
     return sep.join(list(map(str, list(args)))) + end
 ```
-
-### Кофейня
-
+### F. Кофейня
 ```python
 def order(*args) -> str:
     temp = in_stock
@@ -68,7 +77,8 @@ def order(*args) -> str:
         "Макиато": {"coffee": 2, "milk": 1},
         "Кофе по-венски": {"coffee": 1, "cream": 2},
         "Латте Макиато": {"coffee": 1, "milk": 2, "cream": 1},
-        "Кон Панна": {"coffee": 1, "cream": 1}}
+        "Кон Панна": {"coffee": 1, "cream": 1},
+    }
 
     for grade in args:
         for ingridient in COFFEE[grade]:
@@ -82,9 +92,7 @@ def order(*args) -> str:
     if in_stock == temp:
         return "К сожалению, не можем предложить Вам напиток"
 ```
-
-### В эфире рубрика «Эксперименты»
-
+### G. В эфире рубрика «Эксперименты»
 ```python
 a = tuple()
 
@@ -99,23 +107,19 @@ def get_sum() -> tuple[float, float]:
 
 
 def get_average() -> tuple[float, float]:
-    return round(get_sum()[0] / (len(a) // 2), 2), round(get_sum()[1] / (len(a) // 2), 2)
+    return round(get_sum()[0] / (len(a) // 2), 2), round(
+        get_sum()[1] / (len(a) // 2), 2
+    )
 ```
-
-### Длинная сортировка
-
+### H. Длинная сортировка
 ```python
 lambda x: (len(x), x.lower())
 ```
-
-### Чётная фильтрация
-
+### I. Чётная фильтрация
 ```python
 lambda x: not sum(map(int, str(x))) % 2
 ```
-
-### Ключевой секрет
-
+### J. Ключевой секрет
 ```python
 def secret_replace(text: str, **replaces) -> str:
     result, replaces = "", {d: (v, 0) for d, v in replaces.items()}
