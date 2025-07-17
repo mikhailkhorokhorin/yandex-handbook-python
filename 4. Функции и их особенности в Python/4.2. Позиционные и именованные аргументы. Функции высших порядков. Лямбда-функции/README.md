@@ -67,7 +67,63 @@ def month(num: int, lang: str = "ru") -> str:
 def to_string(*args, sep: str = " ", end: str = "\n") -> str:
     return sep.join(list(map(str, list(args)))) + end
 ```
-### F. Кофейня
+### F. Арифметический помощник
+```python
+def get_operator(op: str):
+    res = {
+        "+": lambda a, b: a + b,
+        "-": lambda a, b: a - b,
+        "*": lambda a, b: a * b,
+        "//": lambda a, b: a // b,
+        "**": lambda a, b: a**b,
+    }
+    return res[op]
+```
+### G. Подготовитель данных
+```python
+def to_string(*args, sep: str = " ", end: str = "\n") -> str:
+    return sep.join(list(map(str, list(args)))) + end
+
+
+def get_formatter(sep=" ", end=""):
+    return lambda *args: to_string(*args, sep=sep, end=end)
+```
+### H. Странный рост
+```python
+def grow(*args, **kwargs) -> tuple:
+    res = list(args)
+    for key, value in kwargs.items():
+        for i, num in enumerate(list(args)):
+            if num % len(key) == 0:
+                res[i] += value
+    return tuple(res)
+```
+### I. Странное произведение
+```python
+def product(*args, **kwargs) -> tuple:
+    res = []
+    for item in args:
+        keys = {key for key in kwargs if key in item}
+        if keys:
+            prod = 1
+            for key in keys:
+                prod *= kwargs[key]
+            res.append(prod)
+
+    return tuple(res)
+```
+### J. Наилучший выбор
+```python
+def choice(*args, **kwargs) -> int:
+    if "min" in kwargs:
+        f = kwargs["min"]
+        g = min
+    else:
+        f = kwargs["max"]
+        g = max
+    return g(map(f, args))
+```
+### K. Кофейня
 ```python
 def order(*args) -> str:
     temp = in_stock
@@ -92,7 +148,7 @@ def order(*args) -> str:
     if in_stock == temp:
         return "К сожалению, не можем предложить Вам напиток"
 ```
-### G. В эфире рубрика «Эксперименты»
+### L. В эфире рубрика «Эксперименты»
 ```python
 a = tuple()
 
@@ -111,15 +167,54 @@ def get_average() -> tuple[float, float]:
         get_sum()[1] / (len(a) // 2), 2
     )
 ```
-### H. Длинная сортировка
+### M. Длинная сортировка
 ```python
 lambda x: (len(x), x.lower())
 ```
-### I. Чётная фильтрация
+### N. Чётная фильтрация
 ```python
 lambda x: not sum(map(int, str(x))) % 2
 ```
-### J. Ключевой секрет
+### O. Повторюшка
+```python
+def get_repeater(func, count: int):
+    def repeater(num: int) -> int:
+        for _ in range(count):
+            num = func(num)
+        return num
+
+    return repeater
+```
+### P. Обратная связь
+```python
+def login(username, password, success, error):
+    total = sum(ord(i) for i in username) * len(username)
+    hex_str = hex(total)[2:]
+
+    if hex_str[::-1].lower() == password.lower():
+        success(username)
+    else:
+        error(username)
+```
+### Q. Фильтрация словаря
+```python
+lambda item: isinstance(item[1], list) and any(
+    x % 2 == 0 for x in item[1] if isinstance(x, int)
+)
+```
+### R. Преобразование словаря
+```python
+lambda item: (
+    "".join(c for c in item[0].lower() if c.isalpha()),
+    (
+        sum(item[1])
+        if hasattr(item[1], "__iter__")
+        and not isinstance(item[1], (str, bytes))
+        else item[1]
+    ),
+)
+```
+### S. Ключевой секрет
 ```python
 def secret_replace(text: str, **replaces) -> str:
     result, replaces = "", {d: (v, 0) for d, v in replaces.items()}
@@ -131,4 +226,48 @@ def secret_replace(text: str, **replaces) -> str:
         else:
             result += i
     return result
+```
+### T. База данных пользователей
+```python
+import re
+from datetime import datetime
+
+db = []
+
+
+def insert(*users):
+    db.extend(users)
+
+
+def select(condition=None):
+    result = db
+
+    if condition:
+        field, op, value = re.split(r"\s*(<=|>=|==|!=|<|>)\s*", condition)
+
+        def convert(val, field_name):
+            if field_name == "birth":
+                return datetime.strptime(val, "%d.%m.%Y")
+            elif field_name == "id":
+                return int(val)
+            else:
+                return val
+
+        value = convert(value, field)
+        ops = {
+            ">": lambda a, b: a > b,
+            "<": lambda a, b: a < b,
+            ">=": lambda a, b: a >= b,
+            "<=": lambda a, b: a <= b,
+            "==": lambda a, b: a == b,
+            "!=": lambda a, b: a != b,
+        }
+
+        result = list(
+            filter(
+                lambda user: ops[op](convert(user[field], field), value), db
+            )
+        )
+
+    return sorted(result, key=lambda user: user["id"])
 ```
