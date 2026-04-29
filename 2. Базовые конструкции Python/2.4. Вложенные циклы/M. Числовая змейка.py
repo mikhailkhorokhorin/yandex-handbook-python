@@ -4,8 +4,7 @@ def main() -> None:
     for i in range(n):
         print(
             " ".join(
-                f"{i * m + (j + 1 if i % 2 == 0 else m - j):>{width}}"
-                for j in range(m)
+                f"{i * m + (j + 1 if i % 2 == 0 else m - j):>{width}}" for j in range(m)
             )
         )
 

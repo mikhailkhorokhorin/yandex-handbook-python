@@ -207,15 +207,7 @@ if __name__ == "__main__":
 ```python
 def main() -> None:
     surnames = [input() for _ in range(int(input()))]
-    print(
-        sum(
-            [
-                surnames.count(i)
-                for i in set(surnames)
-                if surnames.count(i) != 1
-            ]
-        )
-    )
+    print(sum([surnames.count(i) for i in set(surnames) if surnames.count(i) != 1]))
 
 
 if __name__ == "__main__":
@@ -261,16 +253,8 @@ def main() -> None:
     for _ in range(int(input())):
         name = input()
         dishes[name] = [input() for _ in range(int(input()))]
-        (
-            can_cook.append(name)
-            if len(set(dishes[name]) - set(products)) == 0
-            else ...
-        )
-    (
-        print(*sorted(can_cook), sep="\n")
-        if can_cook
-        else print("Готовить нечего")
-    )
+        (can_cook.append(name) if len(set(dishes[name]) - set(products)) == 0 else ...)
+    (print(*sorted(can_cook), sep="\n") if can_cook else print("Готовить нечего"))
 
 
 if __name__ == "__main__":
@@ -281,9 +265,7 @@ if __name__ == "__main__":
 def main() -> None:
     result = []
     for i in [bin(x)[2:] for x in map(int, input().split())]:
-        result.append(
-            {"digits": len(i), "units": i.count("1"), "zeros": i.count("0")}
-        )
+        result.append({"digits": len(i), "units": i.count("1"), "zeros": i.count("0")})
     print(result)
 
 
@@ -373,9 +355,7 @@ if __name__ == "__main__":
 ```python
 def LCD(num1: int, num2: int) -> int:
     while num1 != 0 and num2 != 0:
-        num1, num2 = (
-            (num1 % num2, num2) if num1 > num2 else (num1, num2 % num1)
-        )
+        num1, num2 = (num1 % num2, num2) if num1 > num2 else (num1, num2 % num1)
     return num1 + num2
 
 
@@ -383,9 +363,7 @@ def main() -> None:
     string = sorted(set(map(int, input().split("; "))))
     result = {str(i): [] for i in string}
     for i in string:
-        result[str(i)].extend(
-            str(j) for j in string if i != j and LCD(i, j) == 1
-        )
+        result[str(i)].extend(str(j) for j in string if i != j and LCD(i, j) == 1)
         if result[str(i)]:
             print(f"{i} - {', '.join(result[str(i)])}")
 

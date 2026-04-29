@@ -10,9 +10,7 @@ class Point:
         self.y += y
 
     def length(self, point) -> int:
-        return round(
-            (((point.x - self.x) ** 2) + ((point.y - self.y) ** 2)) ** 0.5, 2
-        )
+        return round((((point.x - self.x) ** 2) + ((point.y - self.y) ** 2)) ** 0.5, 2)
 
 
 class PatchedPoint(Point):
@@ -35,9 +33,7 @@ class Point:
         self.y += y
 
     def length(self, point) -> int:
-        return round(
-            (((point.x - self.x) ** 2) + ((point.y - self.y) ** 2)) ** 0.5, 2
-        )
+        return round((((point.x - self.x) ** 2) + ((point.y - self.y) ** 2)) ** 0.5, 2)
 
 
 class PatchedPoint(Point):
@@ -66,9 +62,7 @@ class Point:
         self.y += y
 
     def length(self, point) -> int:
-        return round(
-            (((point.x - self.x) ** 2) + ((point.y - self.y) ** 2)) ** 0.5, 2
-        )
+        return round((((point.x - self.x) ** 2) + ((point.y - self.y) ** 2)) ** 0.5, 2)
 
 
 class PatchedPoint(Point):
@@ -106,11 +100,7 @@ class Fraction:
         )
 
     def __init__(self, *args) -> None:
-        args = (
-            tuple(map(int, args[0].split("/")))
-            if isinstance(args[0], str)
-            else args
-        )
+        args = tuple(map(int, args[0].split("/"))) if isinstance(args[0], str) else args
         self.__numerator, self.__denominator = map(abs, (args[0], args[1]))
         self.__try_reduce()
 
@@ -141,21 +131,13 @@ class Fraction:
         )
 
     def __init__(self, *args) -> None:
-        args = (
-            tuple(map(int, args[0].split("/")))
-            if isinstance(args[0], str)
-            else args
-        )
+        args = tuple(map(int, args[0].split("/"))) if isinstance(args[0], str) else args
         self.sign = 1 if args[0] * args[1] >= 0 else -1
         self.__numerator, self.__denominator = map(abs, (args[0], args[1]))
         self.__try_reduce()
 
     def numerator(self, number: int = 0) -> int:
-        (
-            self.__init__(self.sign * number, self.denominator())
-            if number
-            else ...
-        )
+        (self.__init__(self.sign * number, self.denominator()) if number else ...)
         return abs(self.__numerator)
 
     def denominator(self, number: int = 0) -> int:
@@ -169,9 +151,7 @@ class Fraction:
         return f"{self.sign * self.numerator()}/{self.denominator()}"
 
     def __repr__(self) -> str:
-        return (
-            f"Fraction('{self.sign * self.numerator()}/{self.denominator()}')"
-        )
+        return f"Fraction('{self.sign * self.numerator()}/{self.denominator()}')"
 ```
 ### F. Дроби v0.3
 ```python
@@ -186,21 +166,13 @@ class Fraction:
         )
 
     def __init__(self, *args) -> None:
-        args = (
-            tuple(map(int, args[0].split("/")))
-            if isinstance(args[0], str)
-            else args
-        )
+        args = tuple(map(int, args[0].split("/"))) if isinstance(args[0], str) else args
         self.sign = 1 if args[0] * args[1] >= 0 else -1
         self.__numerator, self.__denominator = map(abs, (args[0], args[1]))
         self.__try_reduce()
 
     def numerator(self, number: int = 0) -> int:
-        (
-            self.__init__(self.sign * number, self.denominator())
-            if number
-            else ...
-        )
+        (self.__init__(self.sign * number, self.denominator()) if number else ...)
         return abs(self.__numerator)
 
     def denominator(self, number: int = 0) -> int:
@@ -239,9 +211,7 @@ class Fraction:
         return f"{self.sign * self.numerator()}/{self.denominator()}"
 
     def __repr__(self) -> str:
-        return (
-            f"Fraction('{self.sign * self.numerator()}/{self.denominator()}')"
-        )
+        return f"Fraction('{self.sign * self.numerator()}/{self.denominator()}')"
 ```
 ### G. Дроби v0.4
 ```python
@@ -256,21 +226,13 @@ class Fraction:
         )
 
     def __init__(self, *args) -> None:
-        args = (
-            tuple(map(int, args[0].split("/")))
-            if isinstance(args[0], str)
-            else args
-        )
+        args = tuple(map(int, args[0].split("/"))) if isinstance(args[0], str) else args
         self.sign = 1 if args[0] * args[1] >= 0 else -1
         self.__numerator, self.__denominator = map(abs, (args[0], args[1]))
         self.__try_reduce()
 
     def numerator(self, number: int = 0) -> int:
-        (
-            self.__init__(self.sign * number, self.denominator())
-            if number
-            else ...
-        )
+        (self.__init__(self.sign * number, self.denominator()) if number else ...)
         return abs(self.__numerator)
 
     def denominator(self, number: int = 0) -> int:
@@ -309,9 +271,7 @@ class Fraction:
         return self.__neg__().__add__(other)
 
     def __mul__(self, other):
-        numerator = (
-            self.sign * self.numerator() * other.sign * other.numerator()
-        )
+        numerator = self.sign * self.numerator() * other.sign * other.numerator()
         denominator = self.denominator() * other.denominator()
         return Fraction(numerator, denominator)
 
@@ -330,9 +290,7 @@ class Fraction:
         return f"{self.sign * self.numerator()}/{self.denominator()}"
 
     def __repr__(self) -> str:
-        return (
-            f"Fraction('{self.sign * self.numerator()}/{self.denominator()}')"
-        )
+        return f"Fraction('{self.sign * self.numerator()}/{self.denominator()}')"
 ```
 ### H. Дроби v0.5
 ```python
@@ -347,21 +305,13 @@ class Fraction:
         )
 
     def __init__(self, *args) -> None:
-        args = (
-            tuple(map(int, args[0].split("/")))
-            if isinstance(args[0], str)
-            else args
-        )
+        args = tuple(map(int, args[0].split("/"))) if isinstance(args[0], str) else args
         self.sign = 1 if args[0] * args[1] >= 0 else -1
         self.__numerator, self.__denominator = map(abs, (args[0], args[1]))
         self.__try_reduce()
 
     def numerator(self, number: int = 0) -> int:
-        (
-            self.__init__(self.sign * number, self.denominator())
-            if number
-            else ...
-        )
+        (self.__init__(self.sign * number, self.denominator()) if number else ...)
         return abs(self.__numerator)
 
     def denominator(self, number: int = 0) -> int:
@@ -400,9 +350,7 @@ class Fraction:
         return self.__neg__().__add__(other)
 
     def __mul__(self, other):
-        numerator = (
-            self.sign * self.numerator() * other.sign * other.numerator()
-        )
+        numerator = self.sign * self.numerator() * other.sign * other.numerator()
         denominator = self.denominator() * other.denominator()
         return Fraction(numerator, denominator)
 
@@ -439,9 +387,7 @@ class Fraction:
         return f"{self.sign * self.numerator()}/{self.denominator()}"
 
     def __repr__(self) -> str:
-        return (
-            f"Fraction('{self.sign * self.numerator()}/{self.denominator()}')"
-        )
+        return f"Fraction('{self.sign * self.numerator()}/{self.denominator()}')"
 ```
 ### I. Дроби v0.6
 ```python
@@ -456,11 +402,7 @@ class Fraction:
         )
 
     def __init__(self, *args) -> None:
-        args = (
-            (args[0], 1)
-            if len(args) == 1 and isinstance(args[0], int)
-            else args
-        )
+        args = (args[0], 1) if len(args) == 1 and isinstance(args[0], int) else args
         if isinstance(args[0], str):
             args = (
                 tuple(map(int, args[0].split("/")))
@@ -472,11 +414,7 @@ class Fraction:
         self.__try_reduce()
 
     def numerator(self, number: int = 0) -> int:
-        (
-            self.__init__(self.sign * number, self.denominator())
-            if number
-            else ...
-        )
+        (self.__init__(self.sign * number, self.denominator()) if number else ...)
         return abs(self.__numerator)
 
     def denominator(self, number: int = 0) -> int:
@@ -517,9 +455,7 @@ class Fraction:
 
     def __mul__(self, other):
         other = Fraction(other) if type(other) is not Fraction else other
-        numerator = (
-            self.sign * self.numerator() * other.sign * other.numerator()
-        )
+        numerator = self.sign * self.numerator() * other.sign * other.numerator()
         denominator = self.denominator() * other.denominator()
         return Fraction(numerator, denominator)
 
@@ -556,9 +492,7 @@ class Fraction:
         return f"{self.sign * self.numerator()}/{self.denominator()}"
 
     def __repr__(self) -> str:
-        return (
-            f"Fraction('{self.sign * self.numerator()}/{self.denominator()}')"
-        )
+        return f"Fraction('{self.sign * self.numerator()}/{self.denominator()}')"
 ```
 ### J. Дроби v0.7
 ```python
@@ -573,11 +507,7 @@ class Fraction:
         )
 
     def __init__(self, *args) -> None:
-        args = (
-            (args[0], 1)
-            if len(args) == 1 and isinstance(args[0], int)
-            else args
-        )
+        args = (args[0], 1) if len(args) == 1 and isinstance(args[0], int) else args
         if isinstance(args[0], str):
             args = (
                 tuple(map(int, args[0].split("/")))
@@ -589,11 +519,7 @@ class Fraction:
         self.__try_reduce()
 
     def numerator(self, number: int = 0) -> int:
-        (
-            self.__init__(self.sign * number, self.denominator())
-            if number
-            else ...
-        )
+        (self.__init__(self.sign * number, self.denominator()) if number else ...)
         return abs(self.__numerator)
 
     def denominator(self, number: int = 0) -> int:
@@ -634,9 +560,7 @@ class Fraction:
 
     def __mul__(self, other):
         other = Fraction(other) if type(other) is not Fraction else other
-        numerator = (
-            self.sign * self.numerator() * other.sign * other.numerator()
-        )
+        numerator = self.sign * self.numerator() * other.sign * other.numerator()
         denominator = self.denominator() * other.denominator()
         return Fraction(numerator, denominator)
 
@@ -679,7 +603,5 @@ class Fraction:
         return f"{self.sign * self.numerator()}/{self.denominator()}"
 
     def __repr__(self) -> str:
-        return (
-            f"Fraction('{self.sign * self.numerator()}/{self.denominator()}')"
-        )
+        return f"Fraction('{self.sign * self.numerator()}/{self.denominator()}')"
 ```

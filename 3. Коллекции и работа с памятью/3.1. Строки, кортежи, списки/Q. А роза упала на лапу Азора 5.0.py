@@ -1,8 +1,6 @@
 def main() -> None:
     print(
-        "YES"
-        if (string := input().replace(" ", "").lower()) == string[::-1]
-        else "NO"
+        "YES" if (string := input().replace(" ", "").lower()) == string[::-1] else "NO"
     )
 
 

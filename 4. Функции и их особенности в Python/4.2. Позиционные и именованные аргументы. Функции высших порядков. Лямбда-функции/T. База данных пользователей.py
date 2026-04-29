@@ -33,9 +33,7 @@ def select(condition=None):
         }
 
         result = list(
-            filter(
-                lambda user: ops[op](convert(user[field], field), value), db
-            )
+            filter(lambda user: ops[op](convert(user[field], field), value), db)
         )
 
     return sorted(result, key=lambda user: user["id"])

@@ -55,9 +55,7 @@ from sys import stdin
 
 def main() -> None:
     x = [i.strip() for i in stdin]
-    print(
-        *[line for line in x[:-1] if x[-1].lower() in line.lower()], sep="\n"
-    )
+    print(*[line for line in x[:-1] if x[-1].lower() in line.lower()], sep="\n")
 
 
 if __name__ == "__main__":
@@ -71,10 +69,7 @@ from sys import stdin
 def main() -> None:
     data = [string.strip().split() for string in stdin]
     words = [
-        word
-        for line in data
-        for word in line
-        if word.lower() == word.lower()[::-1]
+        word for line in data for word in line if word.lower() == word.lower()[::-1]
     ]
     print(*sorted(set(words)), sep="\n")
 
@@ -420,11 +415,7 @@ def main() -> None:
         data = file.read()
     words = [x.lower() for x in data]
     res = [
-        (
-            alphabet[(alphabet.find(x.lower()) + shift) % 26]
-            if x in alphabet
-            else x
-        )
+        (alphabet[(alphabet.find(x.lower()) + shift) % 26] if x in alphabet else x)
         for x in words
     ]
     for x in range(len(res)):

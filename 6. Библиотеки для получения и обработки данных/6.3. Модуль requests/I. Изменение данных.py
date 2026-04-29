@@ -8,10 +8,7 @@ def main() -> None:
     put(
         address,
         data=dumps(
-            {
-                line[0]: line[1]
-                for line in (i.strip().split("=") for i in stdin)
-            }
+            {line[0]: line[1] for line in (i.strip().split("=") for i in stdin)}
         ),
     )
 

@@ -5,11 +5,7 @@ def main() -> None:
         data = file.read()
     words = [x.lower() for x in data]
     res = [
-        (
-            alphabet[(alphabet.find(x.lower()) + shift) % 26]
-            if x in alphabet
-            else x
-        )
+        (alphabet[(alphabet.find(x.lower()) + shift) % 26] if x in alphabet else x)
         for x in words
     ]
     for x in range(len(res)):

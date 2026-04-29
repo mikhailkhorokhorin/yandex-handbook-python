@@ -16,9 +16,7 @@ class Point:
         self.y += y
 
     def length(self, point) -> int:
-        return round(
-            (((point.x - self.x) ** 2) + ((point.y - self.y) ** 2)) ** 0.5, 2
-        )
+        return round((((point.x - self.x) ** 2) + ((point.y - self.y) ** 2)) ** 0.5, 2)
 ```
 ### C. Не нажимай красную кнопку!
 ```python
@@ -173,12 +171,8 @@ class Rectangle:
 class Checkers:
     def __init__(self) -> None:
         self.field: dict[str, Cell] = {}
-        positions = [
-            column + row for row in "87654321" for column in "ABCDEFGH"
-        ]
-        statuses = (
-            "XBXBXBXBBXBXBXBXXBXBXBXBXXXXXXXXXXXXXXXXWXWXWXWXXWXWXWXWWXWXWXWX"
-        )
+        positions = [column + row for row in "87654321" for column in "ABCDEFGH"]
+        statuses = "XBXBXBXBBXBXBXBXXBXBXBXBXXXXXXXXXXXXXXXXWXWXWXWXXWXWXWXWWXWXWXWX"
         for i in range(64):
             self.field[positions[i]] = Cell(statuses[i])
 

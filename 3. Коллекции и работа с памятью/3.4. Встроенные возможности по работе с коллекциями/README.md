@@ -17,10 +17,7 @@ if __name__ == "__main__":
 def main() -> None:
     names1, names2 = [input().split(", ") for _ in range(2)]
     print(
-        *[
-            f"{names1[i]} - {names2[i]}"
-            for i in range(min(len(names1), len(names2)))
-        ],
+        *[f"{names1[i]} - {names2[i]}" for i in range(min(len(names1), len(names2)))],
         sep="\n",
     )
 
@@ -54,10 +51,7 @@ from itertools import accumulate
 
 def main() -> None:
     print(
-        *[
-            word
-            for word in accumulate(map(lambda x: x + " ", input().split()))
-        ],
+        *[word for word in accumulate(map(lambda x: x + " ", input().split()))],
         sep="\n",
     )
 
@@ -80,11 +74,14 @@ if __name__ == "__main__":
 ### F. Колода карт
 ```python
 def main() -> None:
-    deck, suit = [
-        (x, y)
-        for x in [*[i for i in range(2, 11)], "валет", "дама", "король", "туз"]
-        for y in ["пик", "треф", "бубен", "червей"]
-    ], input()
+    deck, suit = (
+        [
+            (x, y)
+            for x in [*[i for i in range(2, 11)], "валет", "дама", "король", "туз"]
+            for y in ["пик", "треф", "бубен", "червей"]
+        ],
+        input(),
+    )
     print(*[f"{x} {y}" for x, y in deck if y != suit], sep="\n")
 
 
@@ -188,9 +185,7 @@ def main() -> None:
     print(
         "\n".join(
             ", ".join(a)
-            for a in permutations(
-                sorted([input() for _ in range(int(input()))])
-            )
+            for a in permutations(sorted([input() for _ in range(int(input()))]))
         )
     )
 
@@ -207,9 +202,7 @@ def main() -> None:
     print(
         "\n".join(
             ", ".join(a)
-            for a in permutations(
-                sorted([input() for _ in range(int(input()))]), r=3
-            )
+            for a in permutations(sorted([input() for _ in range(int(input()))]), r=3)
         )
     )
 

@@ -17,9 +17,7 @@ from pandas import Series
 def length_stats(text: str) -> tuple[Series, Series]:
     text = "".join(i for i in text if i.isalpha() or i == " ")
     words = sorted(set(text.lower().split()))
-    odd, even = [i for i in words if len(i) % 2], [
-        i for i in words if not len(i) % 2
-    ]
+    odd, even = [i for i in words if len(i) % 2], [i for i in words if not len(i) % 2]
     return (
         Series([len(i) for i in odd], index=odd, dtype="int64"),
         Series([len(i) for i in even], index=even, dtype="int64"),
@@ -115,9 +113,7 @@ def update(journal: DataFrame) -> DataFrame:
             + new_journal["physics"]
             + new_journal["computer science"]
         ) / 3
-    return new_journal.sort_values(
-        by=["average", "name"], ascending=(False, True)
-    )
+    return new_journal.sort_values(by=["average", "name"], ascending=(False, True))
 ```
 ### I. Бесконечный морской бой
 ```python
@@ -125,8 +121,9 @@ from pandas import read_csv
 
 
 def main() -> None:
-    left_top, right_bottom = list(map(int, input().split())), list(
-        map(int, input().split())
+    left_top, right_bottom = (
+        list(map(int, input().split())),
+        list(map(int, input().split())),
     )
     data = read_csv("data.csv")
     print(

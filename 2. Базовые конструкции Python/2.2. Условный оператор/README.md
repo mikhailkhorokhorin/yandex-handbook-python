@@ -2,12 +2,8 @@
 ### A. Просто здравствуй, просто как дела
 ```python
 def main() -> None:
-    print(f"Здравствуйте, {input("Как Вас зовут?\n")}!")
-    print(
-        "Я за вас рада!"
-        if input("Как дела?\n") == "хорошо"
-        else "Всё наладится!"
-    )
+    print(f"Здравствуйте, {input('Как Вас зовут?\n')}!")
+    print("Я за вас рада!" if input("Как дела?\n") == "хорошо" else "Всё наладится!")
 
 
 if __name__ == "__main__":
@@ -47,11 +43,7 @@ if __name__ == "__main__":
 ### E. Яблоки
 ```python
 def main() -> None:
-    print(
-        "Петя"
-        if 7 - 3 + 2 + int(input()) > 6 + 3 + 5 - 2 + int(input())
-        else "Вася"
-    )
+    print("Петя" if 7 - 3 + 2 + int(input()) > 6 + 3 + 5 - 2 + int(input()) else "Вася")
 
 
 if __name__ == "__main__":
@@ -61,11 +53,7 @@ if __name__ == "__main__":
 ```python
 def main() -> None:
     year = int(input())
-    print(
-        "YES"
-        if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0
-        else "NO"
-    )
+    print("YES" if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0 else "NO")
 
 
 if __name__ == "__main__":
@@ -140,11 +128,7 @@ if __name__ == "__main__":
 ```python
 def main() -> None:
     num1, num2, num3 = [int(input()) for _ in range(3)]
-    print(
-        num1 // 10
-        if (num1 // 10) == (num2 // 10) == (num3 // 10)
-        else num1 % 10
-    )
+    print(num1 // 10 if (num1 // 10) == (num2 // 10) == (num3 // 10) else num1 % 10)
 
 
 if __name__ == "__main__":
@@ -171,9 +155,7 @@ if __name__ == "__main__":
 ```python
 def main() -> None:
     num1, num2 = input(), input()
-    combinations = sorted(
-        [int(x) for x in (num1[0], num1[1], num2[0], num2[1])]
-    )
+    combinations = sorted([int(x) for x in (num1[0], num1[1], num2[0], num2[1])])
     print(
         f"{combinations[-1]}{(sum(combinations) - combinations[-1] - combinations[0]) % 10}{combinations[0]}"
     )
@@ -188,10 +170,10 @@ def main() -> None:
     rating = {"Петя": int(input()), "Вася": int(input()), "Толя": int(input())}
     sorted_rating = sorted(rating.items(), key=lambda x: x[1])[::-1]
 
-    print(f"{f"{sorted_rating[0][0]}":^24}")
-    print(f"{f"{sorted_rating[1][0]}":^8}")
-    print(" " * 16 + f"{f"{sorted_rating[2][0]}":^8}")
-    print(f"{"II":^8}" + f"{"I":^8}" + f"{"III":^8}")
+    print(f"{f'{sorted_rating[0][0]}':^24}")
+    print(f"{f'{sorted_rating[1][0]}':^8}")
+    print(" " * 16 + f"{f'{sorted_rating[2][0]}':^8}")
+    print(f"{'II':^8}" + f"{'I':^8}" + f"{'III':^8}")
 
 
 if __name__ == "__main__":

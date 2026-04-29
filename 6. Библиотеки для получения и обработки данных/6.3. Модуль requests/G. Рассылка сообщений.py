@@ -3,8 +3,9 @@ from sys import stdin
 
 
 def main() -> None:
-    address, text = f"http://{input()}/users/{input()}", "".join(
-        i for i in stdin.read()
+    address, text = (
+        f"http://{input()}/users/{input()}",
+        "".join(i for i in stdin.read()),
     )
     try:
         print(text.format(**get(address).json()))

@@ -7,9 +7,7 @@ class Point:
         self.y += y
 
     def length(self, point) -> int:
-        return round(
-            (((point.x - self.x) ** 2) + ((point.y - self.y) ** 2)) ** 0.5, 2
-        )
+        return round((((point.x - self.x) ** 2) + ((point.y - self.y) ** 2)) ** 0.5, 2)
 
 
 class PatchedPoint(Point):

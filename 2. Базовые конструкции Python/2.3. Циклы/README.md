@@ -60,9 +60,7 @@ if __name__ == "__main__":
 def main() -> None:
     num1, num2 = [int(input()) for _ in range(2)]
     while num1 != 0 and num2 != 0:
-        num1, num2 = (
-            (num1 % num2, num2) if num1 > num2 else (num1, num2 % num1)
-        )
+        num1, num2 = (num1 % num2, num2) if num1 > num2 else (num1, num2 % num1)
     print(num1 + num2)
 
 
@@ -73,9 +71,7 @@ if __name__ == "__main__":
 ```python
 def GCD(num1: int, num2: int) -> int:
     while num1 != 0 and num2 != 0:
-        num1, num2 = (
-            (num1 % num2, num2) if num1 > num2 else (num1, num2 % num1)
-        )
+        num1, num2 = (num1 % num2, num2) if num1 > num2 else (num1, num2 % num1)
     return num1 + num2
 
 
@@ -120,7 +116,7 @@ def main() -> None:
 
     while (direction := input()) != "СТОП":
         value = int(input())
-        (x, y) = (
+        x, y = (
             (x + value * x_dir[direction], y)
             if direction in x_dir
             else (x, y + value * y_dir[direction])
@@ -223,9 +219,7 @@ def main() -> None:
     number, half = 500, 250
     print(number)
     while (string := input()) != "Угадал!":
-        number += (
-            half if string == "Больше" else -half if string == "Меньше" else 0
-        )
+        number += half if string == "Больше" else -half if string == "Меньше" else 0
         half = (half + 1) // 2 if half >= 2 else ...
         print(number)
 

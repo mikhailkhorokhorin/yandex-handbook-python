@@ -5,7 +5,7 @@ def main() -> None:
 
     while (direction := input()) != "СТОП":
         value = int(input())
-        (x, y) = (
+        x, y = (
             (x + value * x_dir[direction], y)
             if direction in x_dir
             else (x, y + value * y_dir[direction])

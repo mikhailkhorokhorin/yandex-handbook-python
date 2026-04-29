@@ -5,9 +5,7 @@ def main() -> None:
     print(
         "\n".join(
             ", ".join(a)
-            for a in permutations(
-                sorted([input() for _ in range(int(input()))]), r=3
-            )
+            for a in permutations(sorted([input() for _ in range(int(input()))]), r=3)
         )
     )
 

@@ -9,11 +9,7 @@ class Fraction:
         )
 
     def __init__(self, *args) -> None:
-        args = (
-            tuple(map(int, args[0].split("/")))
-            if isinstance(args[0], str)
-            else args
-        )
+        args = tuple(map(int, args[0].split("/"))) if isinstance(args[0], str) else args
         self.__numerator, self.__denominator = map(abs, (args[0], args[1]))
         self.__try_reduce()
 

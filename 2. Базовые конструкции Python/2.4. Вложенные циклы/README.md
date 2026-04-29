@@ -37,11 +37,7 @@ if __name__ == "__main__":
 ### D. Суммарная сумма
 ```python
 def main() -> None:
-    print(
-        sum(
-            [int(i) for x in [input() for _ in range(int(input()))] for i in x]
-        )
-    )
+    print(sum([int(i) for x in [input() for _ in range(int(input()))] for i in x]))
 
 
 if __name__ == "__main__":
@@ -68,9 +64,7 @@ if __name__ == "__main__":
 ```python
 def GCD(num1: int, num2: int) -> int:
     while num1 != 0 and num2 != 0:
-        num1, num2 = (
-            (num1 % num2, num2) if num1 > num2 else (num1, num2 % num1)
-        )
+        num1, num2 = (num1 % num2, num2) if num1 > num2 else (num1, num2 % num1)
     return num1 + num2
 
 
@@ -89,9 +83,7 @@ if __name__ == "__main__":
 ```python
 def main() -> None:
     for i in range(int(input())):
-        print(
-            "\n".join(f"До старта {j} секунд(ы)" for j in range(3 + i, 0, -1))
-        )
+        print("\n".join(f"До старта {j} секунд(ы)" for j in range(3 + i, 0, -1)))
         print(f"Старт {i + 1}!!!")
 
 
@@ -116,10 +108,7 @@ if __name__ == "__main__":
 ```python
 def main() -> None:
     print(
-        *[
-            max(int(i) for i in x)
-            for x in [input() for _ in range(int(input()))]
-        ],
+        *[max(int(i) for i in x) for x in [input() for _ in range(int(input()))]],
         sep="",
     )
 
@@ -174,8 +163,7 @@ def main() -> None:
     for i in range(n):
         print(
             " ".join(
-                f"{i * m + (j + 1 if i % 2 == 0 else m - j):>{width}}"
-                for j in range(m)
+                f"{i * m + (j + 1 if i % 2 == 0 else m - j):>{width}}" for j in range(m)
             )
         )
 
@@ -203,8 +191,7 @@ def main() -> None:
     for i in range(n):
         print(
             " ".join(
-                f"{j * n + (i + 1 if j % 2 == 0 else n - i):>{width}}"
-                for j in range(m)
+                f"{j * n + (i + 1 if j % 2 == 0 else n - i):>{width}}" for j in range(m)
             )
         )
 
@@ -240,9 +227,7 @@ if __name__ == "__main__":
 ### Q. А роза упала на лапу Азора 3.0
 ```python
 def main() -> None:
-    print(
-        sum([(string := input()) == string[::-1] for _ in range(int(input()))])
-    )
+    print(sum([(string := input()) == string[::-1] for _ in range(int(input()))]))
 
 
 if __name__ == "__main__":
@@ -279,11 +264,7 @@ def main() -> None:
     n = int(input())
     width = len(str(n // 2 + 1))
     for i in range(n):
-        print(
-            " ".join(
-                f"{min(i + 1, n - i, j + 1, n - j):>{width}}" for j in range(n)
-            )
-        )
+        print(" ".join(f"{min(i + 1, n - i, j + 1, n - j):>{width}}" for j in range(n)))
 
 
 if __name__ == "__main__":

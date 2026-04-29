@@ -1,12 +1,8 @@
 class Checkers:
     def __init__(self) -> None:
         self.field: dict[str, Cell] = {}
-        positions = [
-            column + row for row in "87654321" for column in "ABCDEFGH"
-        ]
-        statuses = (
-            "XBXBXBXBBXBXBXBXXBXBXBXBXXXXXXXXXXXXXXXXWXWXWXWXXWXWXWXWWXWXWXWX"
-        )
+        positions = [column + row for row in "87654321" for column in "ABCDEFGH"]
+        statuses = "XBXBXBXBBXBXBXBXXBXBXBXBXXXXXXXXXXXXXXXXWXWXWXWXXWXWXWXWWXWXWXWX"
         for i in range(64):
             self.field[positions[i]] = Cell(statuses[i])
 

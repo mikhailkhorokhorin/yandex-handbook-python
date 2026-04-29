@@ -3,9 +3,7 @@
 ```python
 def main() -> None:
     print(
-        "YES"
-        if all(input()[0].upper() in "АБВ" for _ in range(int(input())))
-        else "NO"
+        "YES" if all(input()[0].upper() in "АБВ" for _ in range(int(input()))) else "NO"
     )
 
 
@@ -36,11 +34,7 @@ if __name__ == "__main__":
 ```python
 def main() -> None:
     while (s := input()) != "":
-        (
-            print(s[2::] if s[0:2:] == "##" else s)
-            if s[-1:-4:-1] != "@@@"
-            else ...
-        )
+        (print(s[2::] if s[0:2:] == "##" else s) if s[-1:-4:-1] != "@@@" else ...)
 
 
 if __name__ == "__main__":
@@ -167,9 +161,7 @@ if __name__ == "__main__":
 ```python
 def GCD(num1: int, num2: int) -> int:
     while num1 != 0 and num2 != 0:
-        num1, num2 = (
-            (num1 % num2, num2) if num1 > num2 else (num1, num2 % num1)
-        )
+        num1, num2 = (num1 % num2, num2) if num1 > num2 else (num1, num2 % num1)
     return num1 + num2
 
 
@@ -203,9 +195,7 @@ if __name__ == "__main__":
 ```python
 def main() -> None:
     print(
-        "YES"
-        if (string := input().replace(" ", "").lower()) == string[::-1]
-        else "NO"
+        "YES" if (string := input().replace(" ", "").lower()) == string[::-1] else "NO"
     )
 
 

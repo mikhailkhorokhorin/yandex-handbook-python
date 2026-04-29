@@ -15,9 +15,7 @@ def make_matrix(size, value: int = 0) -> list:
 ```python
 def GCD(num1: int, num2: int) -> int:
     while num1 != 0 and num2 != 0:
-        num1, num2 = (
-            (num1 % num2, num2) if num1 > num2 else (num1, num2 % num1)
-        )
+        num1, num2 = (num1 % num2, num2) if num1 > num2 else (num1, num2 % num1)
     return num1 + num2
 
 
@@ -198,8 +196,8 @@ def login(username, password, success, error):
 ```
 ### Q. Фильтрация словаря
 ```python
-lambda item: isinstance(item[1], list) and any(
-    x % 2 == 0 for x in item[1] if isinstance(x, int)
+lambda item: (
+    isinstance(item[1], list) and any(x % 2 == 0 for x in item[1] if isinstance(x, int))
 )
 ```
 ### R. Преобразование словаря
@@ -208,8 +206,7 @@ lambda item: (
     "".join(c for c in item[0].lower() if c.isalpha()),
     (
         sum(item[1])
-        if hasattr(item[1], "__iter__")
-        and not isinstance(item[1], (str, bytes))
+        if hasattr(item[1], "__iter__") and not isinstance(item[1], (str, bytes))
         else item[1]
     ),
 )
@@ -264,9 +261,7 @@ def select(condition=None):
         }
 
         result = list(
-            filter(
-                lambda user: ops[op](convert(user[field], field), value), db
-            )
+            filter(lambda user: ops[op](convert(user[field], field), value), db)
         )
 
     return sorted(result, key=lambda user: user["id"])

@@ -32,9 +32,7 @@ from requests import get
 
 
 def main() -> None:
-    print(
-        sum(i for i in get(f"http://{input()}").json() if isinstance(i, int))
-    )
+    print(sum(i for i in get(f"http://{input()}").json() if isinstance(i, int)))
 
 
 if __name__ == "__main__":
@@ -78,8 +76,7 @@ from requests import get
 def main() -> None:
     address = f"http://{input()}/users"
     names = sorted(
-        f"{user["last_name"]} {user["first_name"]}"
-        for user in get(address).json()
+        f"{user['last_name']} {user['first_name']}" for user in get(address).json()
     )
     print("\n".join(names))
 
@@ -94,8 +91,9 @@ from sys import stdin
 
 
 def main() -> None:
-    address, text = f"http://{input()}/users/{input()}", "".join(
-        i for i in stdin.read()
+    address, text = (
+        f"http://{input()}/users/{input()}",
+        "".join(i for i in stdin.read()),
     )
     try:
         print(text.format(**get(address).json()))
@@ -142,10 +140,7 @@ def main() -> None:
     put(
         address,
         data=dumps(
-            {
-                line[0]: line[1]
-                for line in (i.strip().split("=") for i in stdin)
-            }
+            {line[0]: line[1] for line in (i.strip().split("=") for i in stdin)}
         ),
     )
 

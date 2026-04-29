@@ -32,9 +32,7 @@ except ValueError:
 def only_positive_even_sum(value1, value2) -> int:
     if not isinstance(value1, int) or not isinstance(value2, int):
         raise TypeError
-    elif not (value1 > 0 and not value1 % 2) or not (
-        value2 > 0 and not value2 % 2
-    ):
+    elif not (value1 > 0 and not value1 % 2) or not (value2 > 0 and not value2 % 2):
         raise ValueError
     return value1 + value2
 ```
@@ -43,9 +41,7 @@ def only_positive_even_sum(value1, value2) -> int:
 def merge(value1, value2):
     if not hasattr(value1, "__iter__") or not hasattr(value2, "__iter__"):
         raise StopIteration
-    if not all(
-        isinstance(x, type(value1[0])) for x in (list(value1) + list(value2))
-    ):
+    if not all(isinstance(x, type(value1[0])) for x in (list(value1) + list(value2))):
         raise TypeError
     if list(value1) != sorted(value1) or list(value2) != sorted(value2):
         raise ValueError
@@ -95,8 +91,7 @@ def name_validation(name: str) -> str:
     if not isinstance(name, str):
         raise TypeError
     elif sum(
-        letter.lower() in "абвгдеёжзийклмнопрстуфхцчшщьыъэюя"
-        for letter in name
+        letter.lower() in "абвгдеёжзийклмнопрстуфхцчшщьыъэюя" for letter in name
     ) != len(name):
         raise CyrillicError
     elif name != name.lower().capitalize():
@@ -117,8 +112,7 @@ def username_validation(username: str) -> str:
     if not isinstance(username, str):
         raise TypeError
     elif sum(
-        letter.lower() in "abcdefghijklmnopqrstuvwxyz0123456789_"
-        for letter in username
+        letter.lower() in "abcdefghijklmnopqrstuvwxyz0123456789_" for letter in username
     ) != len(username):
         raise BadCharacterError
     elif username[0] in "0123456789":
@@ -147,8 +141,7 @@ def name_validation(name: str) -> str:
     if not isinstance(name, str):
         raise TypeError
     elif sum(
-        letter.lower() in "абвгдеёжзийклмнопрстуфхцчшщьыъэюя"
-        for letter in name
+        letter.lower() in "абвгдеёжзийклмнопрстуфхцчшщьыъэюя" for letter in name
     ) != len(name):
         raise CyrillicError
     elif name != name.lower().capitalize():
@@ -160,8 +153,7 @@ def username_validation(username: str) -> str:
     if not isinstance(username, str):
         raise TypeError
     elif sum(
-        letter.lower() in "abcdefghijklmnopqrstuvwxyz0123456789_"
-        for letter in username
+        letter.lower() in "abcdefghijklmnopqrstuvwxyz0123456789_" for letter in username
     ) != len(username):
         raise BadCharacterError
     elif username[0] in "0123456789":

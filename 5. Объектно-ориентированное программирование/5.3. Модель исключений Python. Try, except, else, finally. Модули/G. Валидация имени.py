@@ -10,8 +10,7 @@ def name_validation(name: str) -> str:
     if not isinstance(name, str):
         raise TypeError
     elif sum(
-        letter.lower() in "абвгдеёжзийклмнопрстуфхцчшщьыъэюя"
-        for letter in name
+        letter.lower() in "абвгдеёжзийклмнопрстуфхцчшщьыъэюя" for letter in name
     ) != len(name):
         raise CyrillicError
     elif name != name.lower().capitalize():

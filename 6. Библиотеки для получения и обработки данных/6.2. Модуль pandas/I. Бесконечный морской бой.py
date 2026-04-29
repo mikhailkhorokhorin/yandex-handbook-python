@@ -2,8 +2,9 @@ from pandas import read_csv
 
 
 def main() -> None:
-    left_top, right_bottom = list(map(int, input().split())), list(
-        map(int, input().split())
+    left_top, right_bottom = (
+        list(map(int, input().split())),
+        list(map(int, input().split())),
     )
     data = read_csv("data.csv")
     print(
